@@ -180,7 +180,7 @@ class Dataset {
                 await collection.find().toArray(async function (err, items) {
                     if (err) throw err;
 
-                    for (let i = 0; i < items.length(); ++i)
+                    for (let i = 0; i < items.length; ++i)
                         if (items[i].licenseKey == hashedLicenseKey) {
                             retVal = items[i];
                             break;
