@@ -1,19 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const uuidv1 = require('uuid/v1');
+const bcrypt = require('bcrypt');
+
 const port = process.env.PORT || 3000;
 
 const dataset = require("./modules/dataset.js");
-
-require('dotenv').config();
-
-const morgan = require('morgan');
-const cors = require('cors');
-const uuidv1 = require('uuid/v1');
-const path = require('path');
-const fs = require('fs');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 
 /** **/
 app.get("/api/buildings", (req, res)=>{
