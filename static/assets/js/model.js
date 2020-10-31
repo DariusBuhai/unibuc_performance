@@ -58,7 +58,7 @@ document.addEventListener('keydown', onKeyDown, false);
 
 function generate_hour_chart(){
     let date = new Date();
-    let currHour = date.getHours();
+    let currHour = 24;//date.getHours();
     let pastContainer = document.getElementById('past');
     let hours = {};
 
@@ -128,7 +128,7 @@ viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {
   console.log(event);
 });
 
+document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+
 load_model();
 generate_hour_chart();
-
-document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
