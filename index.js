@@ -31,7 +31,7 @@ app.get("/api/buildings", (req, res)=>{
 /** register stuff */
 app.post('/api/register', async (req, res) => {
   try {
-    const usersList = dataset.getAllUsers();
+    const usersList = await dataset.getAllUsers();
     let user = usersList.find(user => user.username == req.body.username);
 
     if (user != null)
@@ -47,9 +47,9 @@ app.post('/api/register', async (req, res) => {
       password: hashedPassword,
     };
 
-    let validKey = dataset.getLicense(hashedLicenseKey);
+    let validKey = await dataset.getLicense(hashedLicenseKey);
     if (validKey)
-      dataset.addUsers(user);
+      await dataset.addUsers(user);
     else
       res.status(404).send();
 
@@ -62,7 +62,7 @@ app.post('/api/register', async (req, res) => {
 
 /** login stuff */
 app.post('/api/login', async (req, res) => {
-  const usersList = dataset.getAllUsers();
+  const usersList = await dataset.getAllUsers();
   const user = usersList.find(user => user.username == req.body.username);
 
   if (user == null)

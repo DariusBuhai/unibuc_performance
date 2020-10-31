@@ -156,7 +156,7 @@ class Dataset {
     }
 
     async getAllUsers() {
-        let retVal = null;
+        let retVal = [];
         await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
             var dbo = db.db("Cluster0");
