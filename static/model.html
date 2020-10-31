@@ -5,27 +5,60 @@
     <title>Very Basic 3D Viewer</title>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <!-- The Viewer JS & CSS-->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="model_style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v7.*" type="text/css">
     <script language="JavaScript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v7.*"></script>
 </head>
 
 <body>
+
+<div class="info">
+    <div class="general_info">
+        <h1>General information</h1>
+        <div class="piece_of_info">
+            <p class="prop">Building name</p>
+            <p>Spitalul de urgenta</p>
+        </div>
+        <div class="piece_of_info">
+            <p class="prop">Building address</p>
+            <p>Str splaiului, nr 2</p>
+        </div>
+        <div class="piece_of_info">
+            <p class="prop">Number of active hotspots</p>
+            <p>100</p>
+        </div>
+        <div class="piece_of_info">
+            <p class="prop">Maximum capacity</p>
+            <p>100</p>
+        </div>
+    </div>
+    <div class="live_info">
+        <h1>Live information</h1>
+        <div>
+            <div class="piece_of_info">
+                <p class="prop">People number in this moment</p>
+                <p>10</p>
+            </div>
+            <div class="piece_of_info">
+                <p class="prop">Safety coefficient</p>
+                <p>30%</p>
+            </div>
+        </div>
+    </div>
+    <div class="past_info" id="past">
+        <h1>Past information</h1>
+        <div class="piece_of_info">
+            
+        </div>
+    </div>
+</div>
+
 <img src='/images/forge-logo.png' style="height:auto;width:20%;position:absolute;left:10px;top:10px;z-index:233">
 <div id="MyViewerDiv"></div>
 
-
 <!-- Developer JS -->
-<script>
-    var myViewerDiv = document.getElementById('MyViewerDiv');
-    var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
-    var options = {
-        'env' : 'Local',
-        'document' : 'models/210 King/Resource/3D_View/_3D_ 1583181/_3D_.svf',
-    };
-    Autodesk.Viewing.Initializer(options, function() {
-        viewer.start(options.document, options);
-    });
-</script>
+<script type="text/javascript" src="model.js"></script>
 </body>
 
 </html>

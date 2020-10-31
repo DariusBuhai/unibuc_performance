@@ -4,7 +4,6 @@ async function main() {
     const url = "mongodb + srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mongodb.net/Cluster0?retryWrites=true&w=majority";
     const client  = new MongoClient(url);
 
-
     try {
         // Connect to the MongoDB cluster
         await client.connect();
