@@ -128,5 +128,3 @@ class DBManagement {
 }
 
 export default DBManagement;
-
-// to be continued
