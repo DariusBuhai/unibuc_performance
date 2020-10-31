@@ -15,16 +15,69 @@
 
 
 <!-- Developer JS -->
+<img src='/images/forge-logo.png' style="height:auto;width:20%;position:absolute;left:10px;top:10px;z-index:233">
+<div id="MyViewerDiv"></div>
+
+<div class="my-custom-ui">
+    <div>Items selected: <span id="MySelectionValue">0</span></div>
+<div>
+
+<style>
+   .my-custom-ui {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        margin: .3em;
+        padding: .3em;
+        font-size: 3em;
+        font-family: sans-serif;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+    }
+    .my-custom-ui span {
+        color: red;
+    }
+</style>
+
+<!-- Developer JS -->
 <script>
     var myViewerDiv = document.getElementById('MyViewerDiv');
     var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
     var options = {
         'env' : 'Local',
-        'document' : 'models/210 King/Resource/3D_View/_3D_ 1583181/_3D_.svf',
+        'document' : 'House/5f6ae103-9de8-048e-f858-c7b0b0b9f46c/1.svf'
     };
     Autodesk.Viewing.Initializer(options, function() {
         viewer.start(options.document, options);
     });
+
+    viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {
+        var currSelection = viewer.getSelection();
+        console.log(event.model);
+        console.log(event.model.getGlobalOffset);
+        console.log(event.model.getGlobalOffset());
+    });
+
+
+    // EventsTutorial.prototype.onSelectionEvent = function(event) {
+    //     var currSelection = viewer.getSelection();
+    //     var domElem = document.getElementById('MySelectionValue');
+    //     domElem.innerText = currSelection.length;
+    // };
+    //
+    // EventsTutorial.prototype.load = function() {
+    //     this.onSelectionBinded = this.onSelectionEvent.bind(this);
+    //     viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, this.onSelectionBinded);
+    //     return true;
+    // };
+    //
+    // EventsTutorial.prototype.unload = function() {
+    //     viewer.removeEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, this.onSelectionBinded);
+    //     this.onSelectionBinded = null;
+    //     return true;
+    // };
+
 </script>
 </body>
 
