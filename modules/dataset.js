@@ -192,7 +192,16 @@ class Dataset {
         return retVal;
     }
 
+    async addUsers(user) {
+        await MongoClient.connect(url, async function (err, db) {
+            if (err) throw err;
 
+            var dbo = db.db("Cluster0");
+            await dbo.collection('Users', async function (err, collection) {
+                await collection.insert(user);
+            });
+        });
+    }
 }
 
 module.exports = Dataset;

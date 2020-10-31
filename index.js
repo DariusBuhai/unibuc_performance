@@ -51,7 +51,7 @@ app.post('/users', async (req, res) => {
     const license = req.body.licenseKey;
     const hashedPassword = await bcrypt.hash(pass, 10);
     const hashedLicenseKey = await bycript.hash(license, 10);
-    const user = {
+    user = {
       id: uuidv1(),
       username: req.body.username,
       password: hashedPassword,
