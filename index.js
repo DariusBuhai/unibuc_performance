@@ -16,3 +16,5 @@ oAuth2TwoLegged.authenticate().then(function(credentials){
 }, function(err){
     console.error(err);
 });
+
+// Stefan a fost aici
