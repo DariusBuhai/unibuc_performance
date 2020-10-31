@@ -51,9 +51,8 @@ function toggleButton(id) {
   }
 }
 
-function addSphere(coord) {        
-  var material_red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-
+function addSphere(coord, color = 0xff0000) {        
+  var material_red = new THREE.MeshBasicMaterial({ color: color });
   var geom = new THREE.SphereGeometry(20, 20);
   var sphereMesh = new THREE.Mesh(geom, material_red);
 
