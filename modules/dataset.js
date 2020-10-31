@@ -16,7 +16,7 @@ const MongoClient = require('mongodb').MongoClient;
 // buildingId
 // peopleNo
 
-class DBManagement {
+class Dataset {
 
     insertBuilding(building) {
         MongoClient.connect(url, function (err, db) {
@@ -127,6 +127,6 @@ class DBManagement {
     }
 }
 
-export default DBManagement;
+module.exports = Dataset;
 
 // to be continued
