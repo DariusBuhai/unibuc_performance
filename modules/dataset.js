@@ -1,8 +1,9 @@
-const url = "mongodb + srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mongodb.net/Cluster0?retryWrites=true&w=majority";
+const url = "mongodb+srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mongodb.net/Cluster0?retryWrites=true&w=majority";
 const MongoClient = require('mongodb').MongoClient;
 
 // Buildings:
-// id
+// id #
+// adminId #
 // name
 // address
 // hotspotNo
@@ -11,19 +12,20 @@ const MongoClient = require('mongodb').MongoClient;
 // svgLink
 
 // Hours:
-// id
+// id #
 // date
 // buildingId
 // peopleNo
 
-class DBManagement {
+class Dataset {
 
-    insertBuilding(building) {
-        MongoClient.connect(url, function (err, db) {
+    async insertBuilding(building) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
-            db.collection('Buildings', function (err, collection) {
-                collection.insert(building);
+            var dbo = db.db("Cluster0");
+            await dbo.collection('Buildings', async function (err, collection) {
+                await collection.insert(building);
             });
         });
     }
@@ -34,10 +36,11 @@ class DBManagement {
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
 
-            db.collection('Buildings', function (err, collection) {
+            var dbo = db.db("Cluster0");
+            dbo.collection('Buildings', function (err, collection) {
                 collection.find().toArray(function (err, items) {
                     if (err) throw err;
-                    
+
                     for (let i = 0; i < items.length(); ++i)
                         if (items[i].id == buildingId) {
                             retVal = items[i];
@@ -46,28 +49,42 @@ class DBManagement {
                 });
             });
         });
-        
+
         return retVal;
     }
 
-    updateBuilding(newBuilding) {
-        MongoClient.connect(url, function (err, db) {
+    async getBuildings(){
+        let retVal = null;
+        await MongoClient.connect(url, async function(err, db) {
             if (err) throw err;
+            var dbo = db.db("Cluster0");
+            await dbo.collection("Buildings").find().toArray(function(err, result) {
+                if (err) throw err;
+                retVal = result;
+                db.close();
+            });
+        });
+        return retVal;
+    }
 
-            db.collection('Buildings', function (err, collection) {
-                collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
+    async updateBuilding(newBuilding) {
+        await MongoClient.connect(url, async function (err, db) {
+            if (err) throw err;
+            var dbo = db.db("Cluster0");
+            await dbo.collection('Buildings', async function (err, collection) {
+                await collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
                     if (err) throw err;
                 });
             });
         });
     }
 
-    insertHours(hour) {
-        MongoClient.connect(url, function (err, db) {
+    async insertHours(hour) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
-
-            db.collection('Hours', function (err, collection) {
-                collection.insert(hour);
+            var dbo = db.db("Cluster0");
+            await dbo.collection('Hours', async function (err, collection) {
+                await collection.insert(hour);
             });
         });
     }
@@ -78,7 +95,8 @@ class DBManagement {
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
 
-            db.collection('Hours', function (err, collection) {
+            var dbo = db.db("Cluster0");
+            dbo.collection('Hours', function (err, collection) {
                 collection.find().toArray(function (err, items) {
                     if (err) throw err;
 
@@ -100,7 +118,8 @@ class DBManagement {
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
 
-            db.collection('Hours', function (err, collection) {
+            var dbo = db.db("Cluster0");
+            dbo.collection('Hours', function (err, collection) {
                 collection.find().toArray(function (err, items) {
                     if (err) throw err;
 
@@ -118,7 +137,8 @@ class DBManagement {
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
 
-            db.collection('Hours', function (err, collection) {
+            var dbo = db.db("Cluster0");
+            dbo.collection('Hours', function (err, collection) {
                 collection.updateOne({ id: newHours.id }, newHour, function (err, res) {
                     if (err) throw err;
                 });
@@ -127,4 +147,4 @@ class DBManagement {
     }
 }
 
-export default DBManagement;
+module.exports = Dataset;

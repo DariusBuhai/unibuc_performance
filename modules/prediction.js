@@ -1,5 +1,5 @@
 const ip = require('interpolating-polynomial');
-const db = require('mongo.js');
+const db = require('modules/dataset.js');
 
 function makePrediction(hourValue) {
     let dataset = db.getHoursList();
