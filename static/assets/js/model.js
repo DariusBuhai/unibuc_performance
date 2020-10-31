@@ -1,14 +1,46 @@
+var myViewerDiv = document.getElementById('MyViewerDiv');
+var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
+var options = {
+    'env': 'Local',
+    'document': 'models/House/f0224dd3-8767-45c1-ff99-5c9c881b9fee/0.svf',
+};
 
 function load_model(){
-    var myViewerDiv = document.getElementById('MyViewerDiv');
-    var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
-    var options = {
-        'env': 'Local',
-        'document': 'models/210 King/Resource/3D_View/_3D_ 1583181/_3D_.svf',
-    };
     Autodesk.Viewing.Initializer(options, function () {
         viewer.start(options.document, options);
     });
+}
+
+function addSphere() {        
+  //create material red
+  var material_red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+
+  //get bounding box of the model
+
+  var boundingBox = viewer.model.getBoundingBox();
+
+  var maxpt = boundingBox.max;
+  var minpt = boundingBox.min;
+
+  var xdiff = maxpt.x - minpt.x;
+  var ydiff = maxpt.y - minpt.y;
+  var zdiff = maxpt.z - minpt.z;
+
+  //set a nice radius in the model size
+
+  var niceRadius = Math.pow((xdiff * xdiff + ydiff * ydiff + zdiff * zdiff), 0.5) / 10;
+
+  //createsphere1 and place it at max point of boundingBox
+
+  var geom = new THREE.SphereGeometry(niceRadius, 20);
+  var sphereMesh = new THREE.Mesh(geom, material_red);
+
+  sphereMesh.position.set(maxpt.x, maxpt.y, maxpt.z);
+
+  if (!viewer.overlays.hasScene('scene1')) {
+    viewer.overlays.addScene('scene1');
+  }
+  viewer.overlays.addMesh(sphereMesh, 'scene1');
 }
 
 function generate_hour_chart(){
@@ -51,6 +83,13 @@ function generate_hour_chart(){
     });
 }
 
+console.log(1);
+viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {
+  addSphere();
+  console.log('ceva');
+  console.log(event);
+});
+console.log(2);
+
 load_model();
 generate_hour_chart();
-
