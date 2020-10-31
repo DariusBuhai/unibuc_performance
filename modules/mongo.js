@@ -94,6 +94,26 @@ class DBManagement {
         return retVal;
     }
 
+    getHoursList(hourValue) {
+        let retVal = null;
+
+        MongoClient.connect(url, function (err, db) {
+            if (err) throw err;
+
+            db.collection('Hours', function (err, collection) {
+                collection.find().toArray(function (err, items) {
+                    if (err) throw err;
+
+                    retVal = items.filter((h) => {
+                        return h.date.getHours() == hourValue;
+                    });
+                });
+            });
+        });
+
+        return retVal;
+    }
+
     updateHours(newHour) {
         MongoClient.connect(url, function (err, db) {
             if (err) throw err;
