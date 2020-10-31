@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "forge-apis": "^0.7.3",
-    "mongo": "^0.1.0"
+    "mongo": "^0.1.0",
+    "nodemon": "^2.0.6"
   },
   "devDependencies": {},
   "scripts": {
