@@ -8,11 +8,6 @@ const port = process.env.PORT || 3000;
 
 const dataset = require("./modules/dataset.js");
 
-/** **/
-app.get("/api/buildings", (req, res)=>{
-  res.status(200).send(dataset.prototype.getBuildings());
-});
-/** **/
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -28,14 +23,16 @@ app.listen(port, () => {
   console.log('Server started on: ' + port);
 });
 
+/** building api **/
+app.get("/api/buildings", (req, res)=>{
+  res.status(200).send(dataset.prototype.getBuildings());
+});
 
-// login stuff
-
-// register user
-app.post('/users', async (req, res) => {
+/** register stuff */
+app.post('/api/register', async (req, res) => {
   try {
     const usersList = dataset.getAllUsers();
-    const user = usersList.find(user => user.username == req.body.username);
+    let user = usersList.find(user => user.username == req.body.username);
 
     if (user != null)
       return res.status(400).send('Username already exists');
@@ -63,9 +60,8 @@ app.post('/users', async (req, res) => {
   }
 });
 
-// login user
-app.post('/users/login', async (req, res) => {
-  // Authenticate User
+/** login stuff */
+app.post('/api/login', async (req, res) => {
   const usersList = dataset.getAllUsers();
   const user = usersList.find(user => user.username == req.body.username);
 
