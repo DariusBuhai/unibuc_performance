@@ -76,6 +76,27 @@
         </footer>
     </div>
 </div>
+
+<!--//test 3d
+<script src="markupExt.js"></script>
+function onSuccess() {
+viewer.loadExtension("markup3d");
+}
+// create 20 markup points at random x,y,z positions.
+
+var dummyData = [];
+for (let i=0; i<20; i++) {
+dummyData.push({
+icon:  Math.round(Math.random()*3),
+x: Math.random()*300-150,
+y: Math.random()*50-20,
+z: Math.random()*150-130
+});
+}
+window.dispatchEvent(
+new CustomEvent('newData', {'detail': dummyData})
+);-->
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/scripts.js"></script>
