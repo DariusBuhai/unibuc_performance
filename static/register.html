@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Checkout Hot Spots</title>
+    <title>Login</title>
     <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet"/>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
@@ -15,24 +16,25 @@
 <div id="layoutDefault">
     <div id="layoutDefault_content">
         <main>
-            <header class="page-header page-header-dark bg-gradient-primary-to-secondary">
-                <div class="page-header-content pt-10">
-                    <div class="container text-center">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h1 class="page-header-title mb-3">Check out hot spots</h1>
-                                <p class="page-header-text">Join us in helping create better experiences for our customers</p>
-                            </div>
+            <nav class="navbar navbar-marketing navbar-expand-lg transparent navbar-dark fixed-top">
+                <div class="container mt-3 mb-3">
+                    <a class="btn btn-link" href="/"><i class="fas fa-home"></i> &nbsp;Back home</a>
+                </div>
+            </nav>
+            <section class="bg-white pt-15">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <h1 class="mb-3 text-center">Create new account</h1>
+                            <input class="form-control" name="username" placeholder="username" type="email" required>
+                            <br>
+                            <input class="form-control" name="password" placeholder="password" type="password" required>
+                            <br>
+                            <input class="form-control" name="license" placeholder="license_key" type="text" required>
+                            <br>
+                            <button class="btn btn-primary btn-md btn-block align-content-center">Create account</button>
                         </div>
                     </div>
-                </div>
-                <div class="svg-border-rounded text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
-                </div>
-            </header>
-            <section class="bg-white py-10">
-                <div class="container">
-
                 </div>
             </section>
         </main>
@@ -50,9 +52,9 @@
         </footer>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/scripts.js"></script>
-<script src="assets/js/index.js"></script>
 </body>
 </html>

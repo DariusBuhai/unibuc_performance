@@ -2,7 +2,8 @@ const url = "mongodb+srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mong
 const MongoClient = require('mongodb').MongoClient;
 
 // Buildings:
-// id
+// id #
+// adminId #
 // name
 // address
 // hotspotNo
@@ -11,7 +12,7 @@ const MongoClient = require('mongodb').MongoClient;
 // svgLink
 
 // Hours:
-// id
+// id #
 // date
 // buildingId
 // peopleNo
@@ -147,5 +148,3 @@ class Dataset {
 }
 
 module.exports = Dataset;
-
-// to be continued
