@@ -1,84 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
+<link>
     <meta charset="UTF-8">
-    <title>Very Basic 3D Viewer</title>
+    <title>View Building</title>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-    <!-- The Viewer JS & CSS-->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="model_style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v7.*" type="text/css">
     <script language="JavaScript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v7.*"></script>
+
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
-<img src='/images/forge-logo.png' style="height:auto;width:20%;position:absolute;left:10px;top:10px;z-index:233">
-<div id="MyViewerDiv"></div>
-
+<div id="layoutDefault">
+    <div id="layoutDefault_content">
+        <main>
+            <nav class="navbar navbar-marketing navbar-expand-lg bg-dark navbar-dark">
+                <div class="container mt-3 mb-3">
+                    <a class="text-white" href="index.html"><i class="fas fa-arrow-left"></i> &nbsp;Back Home</a>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="MyViewerDiv"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h1>Past Informations</h1>
+                            <canvas id="myChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h1>General information</h1>
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Building Name</td>
+                                    <td>Spitalul de urgenta</td>
+                                </tr>
+                                <tr>
+                                    <td>Building address</td>
+                                    <td>Str splaiului, nr 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of active hotspots</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum capacity</td>
+                                    <td>100</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h1>Live information</h1>
+                            <div>
+                                <div class="piece_of_info">
+                                    <p class="prop">People number in this moment</p>
+                                    <p>10</p>
+                                </div>
+                                <div class="piece_of_info">
+                                    <p class="prop">Safety coefficient</p>
+                                    <p>30%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="layoutDefault_footer">
+        <footer class="footer pt-5 pb-5 mt-auto bg-dark footer-dark">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>
+                    <div class="col-md-6 text-md-right small">
+                        <a href="javascript:void(0);">Privacy Policy</a>
+                        &middot;
+                        <a href="javascript:void(0);">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
 
 <!-- Developer JS -->
-<img src='/images/forge-logo.png' style="height:auto;width:20%;position:absolute;left:10px;top:10px;z-index:233">
-<div id="MyViewerDiv"></div>
-
-<div class="my-custom-ui">
-    <div>Items selected: <span id="MySelectionValue">0</span></div>
-<div>
-
-<style>
-   .my-custom-ui {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        margin: .3em;
-        padding: .3em;
-        font-size: 3em;
-        font-family: sans-serif;
-        background-color: rgba(255, 255, 255, 0.85);
-        border-radius: 8px;
-    }
-    .my-custom-ui span {
-        color: red;
-    }
-</style>
-
-<!-- Developer JS -->
-<script>
-    var myViewerDiv = document.getElementById('MyViewerDiv');
-    var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
-    var options = {
-        'env' : 'Local',
-        'document' : 'House/5f6ae103-9de8-048e-f858-c7b0b0b9f46c/1.svf'
-    };
-    Autodesk.Viewing.Initializer(options, function() {
-        viewer.start(options.document, options);
-    });
-
-    viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {
-        var currSelection = viewer.getSelection();
-        console.log(event.model);
-        console.log(event.model.getGlobalOffset);
-        console.log(event.model.getGlobalOffset());
-    });
-
-
-    // EventsTutorial.prototype.onSelectionEvent = function(event) {
-    //     var currSelection = viewer.getSelection();
-    //     var domElem = document.getElementById('MySelectionValue');
-    //     domElem.innerText = currSelection.length;
-    // };
-    //
-    // EventsTutorial.prototype.load = function() {
-    //     this.onSelectionBinded = this.onSelectionEvent.bind(this);
-    //     viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, this.onSelectionBinded);
-    //     return true;
-    // };
-    //
-    // EventsTutorial.prototype.unload = function() {
-    //     viewer.removeEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, this.onSelectionBinded);
-    //     this.onSelectionBinded = null;
-    //     return true;
-    // };
-
-</script>
+<script type="text/javascript" src="assets/js/model.js" defer></script>
 </body>
 
 </html>
