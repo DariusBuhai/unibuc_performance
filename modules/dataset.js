@@ -169,9 +169,39 @@ class Dataset {
         return retVal;
     }
 
-    // async function getLicense(hashedLicenseKey) {
+    async getLicense(hashedLicenseKey) {
+        let retVal = null;
 
-    // }
+        await MongoClient.connect(url, async function (err, db) {
+            if (err) throw err;
+
+            var dbo = db.db("Cluster0");
+            await dbo.collection('LicenseKeys', async function (err, collection) {
+                await collection.find().toArray(async function (err, items) {
+                    if (err) throw err;
+
+                    for (let i = 0; i < items.length(); ++i)
+                        if (items[i].licenseKey == hashedLicenseKey) {
+                            retVal = items[i];
+                            break;
+                        }
+                });
+            });
+        });
+
+        return retVal;
+    }
+
+    async addUsers(user) {
+        await MongoClient.connect(url, async function (err, db) {
+            if (err) throw err;
+
+            var dbo = db.db("Cluster0");
+            await dbo.collection('Users', async function (err, collection) {
+                await collection.insert(user);
+            });
+        });
+    }
 }
 
 module.exports = Dataset;
