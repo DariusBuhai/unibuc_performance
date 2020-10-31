@@ -4,10 +4,10 @@ const MongoClient = require('mongodb').MongoClient;
 function insertBuilding(building) {
 
     // fot testing only
-    building = {
-        id: 1, name: 'Steve', address: 'Jobs', hospotsNo: 10, maxCap: 100,
-        peopleByHours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-    };
+    // building = {
+    //     id: 1, name: 'Steve', address: 'Jobs', hospotsNo: 10, maxCap: 100,
+    //     peopleByHours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    // };
 
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
@@ -45,20 +45,10 @@ function updateBuilding(newBuilding) {
         if (err) throw err;
 
         db.collection('Buildings', function (err, collection) {
-            collection.update({ id: 1 }, { $set: { firstName: 'James', lastName: 'Gosling' } }, { w: 1 },
-                function (err, result) {
-                    if (err) throw err;
-                    
-                });
-
-            // collection.remove({ id: 2 }, { w: 1 }, function (err, result) {
-
-            //     if (err) throw err;
-
-            //     console.log('Document Removed Successfully');
-            // });
+            collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
+                if (err) throw err;
+            });
         });
-
     });
 }
 
