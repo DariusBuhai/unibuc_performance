@@ -11,5 +11,21 @@ function login(){
     console.log(form_data);
     http_post("/api/login", form_data, function(result){
         console.log(result);
+        if(result.status==200){
+            let cookie = btoa(form_data.username+"&"+form_data.password);
+            setCookie("auth", cookie, 90);
+        }
     });
+}
+
+async function get_logged_user(){
+    let auth_cookie = getCookie("auth");
+    if(auth_cookie){
+        auth_cookie = atob(auth_cookie).split("&");
+        if(auth_cookie.length!==2) return false;
+        let result = await http_post_async("/api/login", {username: auth_cookie[0], password: auth_cookie[1]});
+        if(result!=false)
+            return result;
+    }
+    return false;
 }

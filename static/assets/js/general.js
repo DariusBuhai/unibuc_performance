@@ -75,6 +75,24 @@ function http_post(theUrl, data, callback, isFormData = false) {
     }
 }
 
+async function http_post_async(theUrl, data, callback, isFormData = false){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", theUrl, true);
+    if(isFormData){
+        var formData = new FormData();
+        for(const [key, value] of Object.entries(data))
+            formData.append(key, value);
+        xmlHttp.send(formData);
+    }else{
+        xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlHttp.send(JSON.stringify(data));
+    }
+
+    if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+        return xmlHttp.responseText;
+    return false;
+}
+
 function http_put(theUrl, data, callback, isFormData) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
@@ -109,4 +127,27 @@ function toggle_hide_by_class(className, hide = true){
     let el = document.getElementsByClassName(className);
     for(let i=0;i<el.length;i++)
         el[i].hidden= hide;
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
