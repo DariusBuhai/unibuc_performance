@@ -1,9 +1,3 @@
-var FORGE_CLIENT_ID = 'UGtHbq5PBjPXdicgpOWQtM1hHgL4yaDU' , FORGE_CLIENT_SECRET = 'ftck1wYAwbsFFSr7';
-var mongo = require('mongodb');
-var autoRefresh = true; // or false
-
-
-
 var express = require('express'),
   bodyParser = require('body-parser'),
   app = express(),
