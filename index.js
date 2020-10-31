@@ -14,7 +14,6 @@ const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const db = require('./modules/authDb.js');
 
 /** **/
 app.get("/api/buildings", (req, res)=>{
@@ -42,7 +41,7 @@ app.listen(port, () => {
 // register user
 app.post('/users', async (req, res) => {
   try {
-    const usersList = db.getAllUsers();
+    const usersList = dataset.getAllUsers();
     const user = usersList.find(user => user.username == req.body.username);
 
     if (user != null)
@@ -53,14 +52,14 @@ app.post('/users', async (req, res) => {
     const hashedPassword = await bcrypt.hash(pass, 10);
     const hashedLicenseKey = await bycript.hash(license, 10);
     const user = {
+      id: uuidv1(),
       username: req.body.username,
       password: hashedPassword,
-      licenseKey: hashedLicenseKey
     };
 
-    let validKey = db.getLicense(hashedLicenseKey);
+    let validKey = dataset.getLicense(hashedLicenseKey);
     if (validKey)
-      db.updateUsers(user);
+      dataset.addUsers(user);
     else
       res.status(404).send();
 
@@ -74,7 +73,7 @@ app.post('/users', async (req, res) => {
 // login user
 app.post('/users/login', async (req, res) => {
   // Authenticate User
-  const usersList = db.getAllUsers();
+  const usersList = dataset.getAllUsers();
   const user = usersList.find(user => user.username == req.body.username);
 
   if (user == null)
