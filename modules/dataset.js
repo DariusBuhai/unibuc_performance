@@ -18,13 +18,13 @@ const MongoClient = require('mongodb').MongoClient;
 
 class Dataset {
 
-    insertBuilding(building) {
-        MongoClient.connect(url, function (err, db) {
+    async insertBuilding(building) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
             var dbo = db.db("Cluster0");
-            dbo.collection('Buildings', function (err, collection) {
-                collection.insert(building);
+            await dbo.collection('Buildings', async function (err, collection) {
+                await collection.insert(building);
             });
         });
     }
@@ -66,24 +66,24 @@ class Dataset {
         return retVal;
     }
 
-    updateBuilding(newBuilding) {
-        MongoClient.connect(url, function (err, db) {
+    async updateBuilding(newBuilding) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
             var dbo = db.db("Cluster0");
-            dbo.collection('Buildings', function (err, collection) {
-                collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
+            await dbo.collection('Buildings', async function (err, collection) {
+                await collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
                     if (err) throw err;
                 });
             });
         });
     }
 
-    insertHours(hour) {
-        MongoClient.connect(url, function (err, db) {
+    async insertHours(hour) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
             var dbo = db.db("Cluster0");
-            dbo.collection('Hours', function (err, collection) {
-                collection.insert(hour);
+            await dbo.collection('Hours', async function (err, collection) {
+                await collection.insert(hour);
             });
         });
     }
