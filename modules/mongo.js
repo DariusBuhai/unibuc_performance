@@ -19,16 +19,44 @@ function insertBuilding(building) {
 }
 
 function getBuilding(buildingId) {
+    let retVal = null;
 
     MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
 
         db.collection('Buildings', function (err, collection) {
-
             collection.find().toArray(function (err, items) {
                 if (err) throw err;
-                console.log(items);
+                
+                for (let i = 0; i < items.length(); ++i)
+                    if (items[i].id == buildingId) {
+                        retVal = items[i];
+                        break;
+                    }
             });
+        });
+    });
+    
+    return retVal;
+}
 
+function updateBuilding(newBuilding) {
+    MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+        if (err) throw err;
+
+        db.collection('Buildings', function (err, collection) {
+            collection.update({ id: 1 }, { $set: { firstName: 'James', lastName: 'Gosling' } }, { w: 1 },
+                function (err, result) {
+                    if (err) throw err;
+                    
+                });
+
+            // collection.remove({ id: 2 }, { w: 1 }, function (err, result) {
+
+            //     if (err) throw err;
+
+            //     console.log('Document Removed Successfully');
+            // });
         });
 
     });
