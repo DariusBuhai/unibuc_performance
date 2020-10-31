@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "chart.js": "^2.9.4",
     "express": "^4.17.1",
     "forge-apis": "^0.7.3",
-    "mongo": "^0.1.0"
+    "interpolating-polynomial": "^1.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.2",
+    "nodemon": "^2.0.6"
   },
   "devDependencies": {},
   "scripts": {

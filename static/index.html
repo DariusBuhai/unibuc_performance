@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Job Listing - SB Admin Pro</title>
+    <title>Checkout Hot Spots</title>
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -15,13 +15,19 @@
 <div id="layoutDefault">
     <div id="layoutDefault_content">
         <main>
+            <nav class="navbar navbar-marketing navbar-expand-lg transparent navbar-dark fixed-top">
+                <div class="container mt-3 mb-3">
+                    <a class="text-white" href="login.html"><i class="fas fa-user"></i> &nbsp;Login</a>
+                    <a class="text-white" href="register.html"><i class="fas fa-user-plus"></i> &nbsp;Create account</a>
+                </div>
+            </nav>
             <header class="page-header page-header-dark bg-gradient-primary-to-secondary">
                 <div class="page-header-content pt-10">
                     <div class="container text-center">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <h1 class="page-header-title mb-3">Check out hot spots</h1>
-                                <p class="page-header-text">Join us in helping create better experiences for our customers</p>
+                                <h1 class="page-header-title mb-3">SmartCity</h1>
+                                <p class="page-header-text">Join our community and help us identify how crowded are your local institutions</p>
                             </div>
                         </div>
                     </div>
@@ -34,93 +40,18 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="mb-0">Institutionz</h2>
-                                <div class="badge badge-primary-soft text-primary badge-marketing">3 Openings</div>
-                            </div>
-                            <hr class="mb-0" />
-                            <ul class="list-group list-group-flush list-group-careers">
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Hospital</a>
-                                    <div class="small">Remote - US (San Francisco, CA)</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Operations Manager</a>
-                                    <div class="small">San Francisco, CA (HQ)</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Administrative Assistant</a>
-                                    <div class="small">Dallas, TX</div>
-                                </li>
-                            </ul>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="mb-0">Engineering</h2>
-                                <div class="badge badge-primary-soft text-primary badge-marketing">5 Openings</div>
-                            </div>
-                            <hr class="mb-0" />
-                            <ul class="list-group list-group-flush list-group-careers">
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Senior Software Engineer</a>
-                                    <div class="small">Remote - US / Canada</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Software Engineer</a>
-                                    <div class="small">Remote - Global</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Data Scientist</a>
-                                    <div class="small">Remote - Global</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Front End Engineer</a>
-                                    <div class="small">San Francisco, CA (HQ)</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Technical Director</a>
-                                    <div class="small">San Francisco, CA (HQ)</div>
-                                </li>
-                            </ul>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="mb-0">Sales</h2>
-                                <div class="badge badge-primary-soft text-primary badge-marketing">4 Openings</div>
-                            </div>
-                            <hr class="mb-0" />
-                            <ul class="list-group list-group-flush list-group-careers">
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Sales Support Coordinator</a>
-                                    <div class="small">Remote - US (San Francisco, CA)</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Senior Sales Representative</a>
-                                    <div class="small">Remove - US Northeast</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Paid Search Specialist</a>
-                                    <div class="small">Remote - Global</div>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="model.html" target="_blank">Junior Sales Representative</a>
-                                    <div class="small">San Francisco, CA (HQ)</div>
-                                </li>
-                            </ul>
-                            <h4 class="mb-4">
-                                <div class="icon-stack bg-primary text-white mr-2"><i data-feather="smile"></i></div>
-                                Work happier
-                            </h4>
-                            <p class="mb-5">Build amazing things with autonomy, self-direction, and a healthy work-life balance. We offer flexible work schedules for all of our employees and unlimited PTO. We also believe that if a job allows for it, you should work wherever you’re happiest.</p>
-                            <h4 class="mb-4">
-                                <div class="icon-stack bg-primary text-white mr-2"><i data-feather="trending-up"></i></div>
-                                Keep growing
-                            </h4>
-                            <p>Learn how you learn best. From books to conferences, you’ll get a yearly budget for your individual learning and development goals. If ebooks are more your style, you’ll get a brand new Kindle on your first day.</p>
+                            <div id="buildings_and_categories"></div>
+
                             <hr class="my-5" />
+
                             <div class="card bg-light shadow-none">
                                 <div class="card-body text-center p-5">
-                                    <h2>Internships</h2>
-                                    <p class="lead mb-4">Are you currently enrolled at a college or university and looking for hands-on experience while earning class credit? Take a look at our internship opportunities!</p>
-                                    <a class="btn btn-primary btn-marketing rounded-pill" href="model.html">Explore Internships</a>
+                                    <h2>Checkout HotSpot Map</h2>
+                                    <p class="lead mb-4">View real time building </p>
+                                    <a class="btn btn-primary btn-marketing rounded-pill" href="model.html">Open map</a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -131,11 +62,9 @@
         <footer class="footer pt-5 pb-5 mt-auto bg-dark footer-dark">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>
+                    <div class="col-md-6 small">Copyright &copy; @unibuc_performance</div>
                     <div class="col-md-6 text-md-right small">
-                        <a href="javascript:void(0);">Privacy Policy</a>
-                        &middot;
-                        <a href="javascript:void(0);">Terms &amp; Conditions</a>
+                        <a href="terms-conditions.html" target="_blank">Terms &amp; Conditions</a>
                     </div>
                 </div>
             </div>
@@ -166,6 +95,7 @@ new CustomEvent('newData', {'detail': dummyData})
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/scripts.js"></script>
+<script src="assets/js/general.js"></script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>
->>>>>>> origin/darius
