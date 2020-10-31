@@ -17,6 +17,15 @@ const MongoClient = require('mongodb').MongoClient;
 // buildingId
 // peopleNo
 
+// Users(Admins):
+// id #
+// username
+// password
+
+// LicenseKeys:
+// id #
+// licenseKey
+
 class Dataset {
 
     async insertBuilding(building) {
@@ -30,15 +39,15 @@ class Dataset {
         });
     }
 
-    getBuilding(buildingId) {
+    async getBuilding(buildingId) {
         let retVal = null;
 
-        MongoClient.connect(url, function (err, db) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
             var dbo = db.db("Cluster0");
-            dbo.collection('Buildings', function (err, collection) {
-                collection.find().toArray(function (err, items) {
+            await dbo.collection('Buildings', async function (err, collection) {
+                await collection.find().toArray(async function (err, items) {
                     if (err) throw err;
 
                     for (let i = 0; i < items.length(); ++i)
@@ -89,15 +98,15 @@ class Dataset {
         });
     }
 
-    getHours(hourId) {
+    async getHours(hourId) {
         let retVal = null;
 
-        MongoClient.connect(url, function (err, db) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
             var dbo = db.db("Cluster0");
-            dbo.collection('Hours', function (err, collection) {
-                collection.find().toArray(function (err, items) {
+            await dbo.collection('Hours', async function (err, collection) {
+                await collection.find().toArray(function (err, items) {
                     if (err) throw err;
 
                     for (let i = 0; i < items.length(); ++i)
@@ -112,15 +121,15 @@ class Dataset {
         return retVal;
     }
 
-    getHoursList(hourValue) {
+    async getHoursList(hourValue) {
         let retVal = null;
 
-        MongoClient.connect(url, function (err, db) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
             var dbo = db.db("Cluster0");
-            dbo.collection('Hours', function (err, collection) {
-                collection.find().toArray(function (err, items) {
+            await dbo.collection('Hours', async function (err, collection) {
+                await collection.find().toArray(async function (err, items) {
                     if (err) throw err;
 
                     retVal = items.filter((h) => {
@@ -133,18 +142,36 @@ class Dataset {
         return retVal;
     }
 
-    updateHours(newHour) {
-        MongoClient.connect(url, function (err, db) {
+    async updateHours(newHour) {
+        await MongoClient.connect(url, async function (err, db) {
             if (err) throw err;
 
             var dbo = db.db("Cluster0");
-            dbo.collection('Hours', function (err, collection) {
-                collection.updateOne({ id: newHours.id }, newHour, function (err, res) {
+            await dbo.collection('Hours', async function (err, collection) {
+                await collection.updateOne({ id: newHours.id }, newHour, async function (err, res) {
                     if (err) throw err;
                 });
             });
         });
     }
+
+    async getAllUsers() {
+        let retVal = null;
+        await MongoClient.connect(url, async function (err, db) {
+            if (err) throw err;
+            var dbo = db.db("Cluster0");
+            await dbo.collection("Users").find().toArray(function (err, result) {
+                if (err) throw err;
+                retVal = result;
+                db.close();
+            });
+        });
+        return retVal;
+    }
+
+    // async function getLicense(hashedLicenseKey) {
+
+    // }
 }
 
 module.exports = Dataset;
