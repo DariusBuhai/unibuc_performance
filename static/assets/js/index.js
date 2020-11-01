@@ -6,7 +6,7 @@ async function generate_buildings(){
     let view_buildings_and_categories = document.getElementById("buildings_and_categories");
     const category_container = generate_dom("<div class=\"d-flex align-items-center justify-content-between\">\n" +
         "                                    <h2 class=\"mb-0\">[NAME]</h2>\n" +
-        "                                    <div class=\"badge badge-primary-soft text-primary badge-marketing\">[STATUS] buildings</div>\n" +
+        "                                    <div class=\"badge badge-primary-soft text-primary badge-marketing\">[COUNTER] buildings</div>\n" +
         "                                </div>");
 
     for (const category of categories){
@@ -14,7 +14,7 @@ async function generate_buildings(){
         if(category_buildings.length===0) continue;
         let current_category = parse_dom(category_container.cloneNode(true), {
             NAME: category,
-            STATUS: buildings.length,
+            COUNTER: category_buildings.length,
         });
         view_buildings_and_categories.appendChild(current_category);
         view_buildings_and_categories.appendChild(generate_dom("<hr class=\"mb-0\" />"));
