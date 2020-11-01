@@ -4,10 +4,8 @@ var options = {
     env: 'Local',
     document: null,
 };
-let perc = 0;
-let dir = "up";
-let spheres = {};
 
+let spheres = {};
 let url_string = window.location.href
 let url = new URL(url_string);
 let buildingId = url.searchParams.get("id");
@@ -63,12 +61,13 @@ function toggleButton(id) {
   }
 }
 
-function addSphere(coord, color = 0xff0000) {        
-  var material_red = new THREE.MeshBasicMaterial({ color: color });
+function addSphere(ball) {        
+  var material = new THREE.MeshBasicMaterial({ color: getColorFromPercentage(
+    parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)) });
   var geom = new THREE.SphereGeometry(20, 20);
-  var sphereMesh = new THREE.Mesh(geom, material_red);
+  var sphereMesh = new THREE.Mesh(geom, material);
 
-  sphereMesh.position.set(coord.x, coord.y, coord.z);
+  sphereMesh.position.set(ball.x, ball.y, ball.z);
   sphereMesh.ballId = Object.keys(spheres).length + 1;
   spheres[sphereMesh.ballId] = sphereMesh;
 
@@ -78,34 +77,34 @@ function addSphere(coord, color = 0xff0000) {
   viewer.overlays.addMesh(sphereMesh, 'scene1');
 }
 
+async function loadBalls() {
+  console.log('view loaded');
+  let balls = await http_get_async(`/api/balls/${buildingId}`, true);
+  console.log('in load')
+  console.log(balls)
+  for (ball of balls) {
+    addSphere(ball);
+  }
+
+  setInterval(updateBalls, 2500);
+}
 
 function getColorFromPercentage(perc) {
-  let green = Math.floor(255 * perc) << (8 * 1);
-  let red = Math.floor(255 * (1 - perc)) << (8 * 2);
+  let green = Math.floor(255 * (1 - perc)) << (8 * 1);
+  let red = Math.floor(255 * perc) << (8 * 2);
   return green + red;
 }
 
 
-function updateBalls() {
-  for (key in spheres) {
+async function updateBalls() {
+  let balls = await http_get_async(`/api/balls/${buildingId}`, true);
+  for (ball of balls) {
     // TODO update spheres color
-    spheres[key].material.color.setHex(getColorFromPercentage(perc));
-    console.log(spheres[key].material.color);
+    spheres[parseInt(ball.id)].material.color.setHex(getColorFromPercentage(
+      parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)
+    ));
   }
   viewer.refresh();
-
-  if (dir == "up" && perc < 1) {
-    perc += 0.05;
-    if (1 - perc < 0.0001) {
-      dir = "down";
-    }
-  }
-  else if (dir == "down" && perc > 0) {
-    perc -= 0.05;
-    if (perc < 0.0001) {
-      dir = "up";
-    }
-  }
 }
 
 async function generate_hour_chart(){
@@ -169,12 +168,14 @@ function addSphereOnClick(event) {
 }
 
 async function initiate_model(){
-    await get_model_details();
-    load_model();
-    generate_hour_chart();
-    viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
-    document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
-    setInterval(updateBalls, 500);
+  get_model_details().then(() => {
+    viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
+  });
+
+  load_model();
+  generate_hour_chart();
+  viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+  document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
 }
 
 initiate_model();
