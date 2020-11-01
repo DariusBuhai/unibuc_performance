@@ -5,7 +5,9 @@ var options = {
     'document': 'models/House/f0224dd3-8767-45c1-ff99-5c9c881b9fee/0.svf',
 };
 
-let spheres = [];
+let perc = 0;
+let dir = "up";
+let spheres = {};
 
 function load_model(){
   Autodesk.Viewing.Initializer(options, function () {
@@ -57,7 +59,8 @@ function addSphere(coord, color = 0xff0000) {
   var sphereMesh = new THREE.Mesh(geom, material_red);
 
   sphereMesh.position.set(coord.x, coord.y, coord.z);
-  spheres.push(sphereMesh);
+  sphereMesh.ballId = Object.keys(spheres).length + 1;
+  spheres[sphereMesh.ballId] = sphereMesh;
 
   if (!viewer.overlays.hasScene('scene1')) {
     viewer.overlays.addScene('scene1');
@@ -65,6 +68,35 @@ function addSphere(coord, color = 0xff0000) {
   viewer.overlays.addMesh(sphereMesh, 'scene1');
 }
 
+
+function getColorFromPercentage(perc) {
+  let green = Math.floor(255 * perc) << (8 * 1);
+  let red = Math.floor(255 * (1 - perc)) << (8 * 2);
+  return green + red;
+}
+
+
+function updateBalls() {
+  for (key in spheres) {
+    // TODO update spheres color
+    spheres[key].material.color.setHex(getColorFromPercentage(perc));
+    console.log(spheres[key].material.color);
+  }
+  viewer.refresh();
+
+  if (dir == "up" && perc < 1) {
+    perc += 0.05;
+    if (1 - perc < 0.0001) {
+      dir = "down";
+    }
+  }
+  else if (dir == "down" && perc > 0) {
+    perc -= 0.05;
+    if (perc < 0.0001) {
+      dir = "up";
+    }
+  }
+}
 
 function generate_hour_chart(){
     let date = new Date();
@@ -135,3 +167,6 @@ generate_hour_chart();
 
 viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
 document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+
+
+setInterval(updateBalls, 500);
