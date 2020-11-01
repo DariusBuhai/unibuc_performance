@@ -108,18 +108,15 @@ function updateBalls() {
   }
 }
 
-function generate_hour_chart(){
-    let date = new Date();
-    let lastXDays = 10;
-    let pastContainer = document.getElementById('past');
-    let hours = {};
+async function generate_hour_chart(){
+    let hours_values = await http_get_async("/api/chart/"+buildingId, true);
 
-    for (let i = 0; i < lastXDays; ++i)
-        hours[i] = Math.floor(Math.random() * 100);
-    console.log(hours);
+    let hours = {};
+    for (let i = 0; i < hours_values.length; ++i)
+        hours[i] = hours_values[i];
 
     var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'line',
         data: {
             labels: Object.keys(hours),
