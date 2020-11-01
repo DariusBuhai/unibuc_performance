@@ -75,7 +75,7 @@ app.post('/api/login', async (req, res) => {
   if (user == null)
     return res.status(400).send('User not found');
   if (await bcrypt.compare(req.body.password, user.password))
-    res.status(200).send('Authentication succeeded')
+    res.status(200).send(user.id)
   else
     res.status(401).send('Wrong password');
 });

@@ -9,8 +9,13 @@ let spheres = {};
 let url_string = window.location.href
 let url = new URL(url_string);
 let buildingId = url.searchParams.get("id");
+let user_is_logged = false;
+let user_id = null;
 
 async function get_model_details(){
+    user_is_logged = await check_logged_user();
+    if(user_is_logged)
+        user_id = await get_logged_user_id();
     let building_details = await http_get_async("/api/building/"+buildingId, true);
     options.document = "models/"+building_details.svfLink;
     document.getElementById("building_name").innerText = building_details.name;
@@ -168,14 +173,14 @@ function addSphereOnClick(event) {
 }
 
 async function initiate_model(){
-  get_model_details().then(() => {
+    await get_model_details();
     viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
-  });
 
-  load_model();
-  generate_hour_chart();
-  viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
-  document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    load_model();
+    generate_hour_chart();
+    if(user_is_logged)
+        viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+    document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
 }
 
 initiate_model();
