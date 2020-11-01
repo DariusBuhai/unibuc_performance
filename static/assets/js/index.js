@@ -26,7 +26,7 @@ async function generate_buildings(){
                 "                                </li>");
             view_building = parse_dom(view_building.cloneNode(true), {
                 NAME: category_buildings[i].name,
-                STATUS: category_buildings[i].status,
+                STATUS: 'Occupancy ' + category_buildings[i].status + '%',
                 ID: category_buildings[i].id,
             });
             view_buildings.appendChild(view_building);
@@ -36,7 +36,7 @@ async function generate_buildings(){
 }
 
 async function generate_index_logged_user_functionalities() {
-    let logged_user = await get_logged_user();
+    let logged_user = await check_logged_user();
     toggle_if_exists("add_location", logged_user);
 }
 

@@ -18,6 +18,7 @@ const bcrypt = require('bcrypt');
 
 // Balls:
 // idBall
+// name
 // idBuilding
 // xCoord
 // yCoord
@@ -37,6 +38,22 @@ const bcrypt = require('bcrypt');
 class Dataset {
 
     // crud Buildings
+    async calculateOccupancy(buildingId) {
+        let ballsList = await db.getBalls().toArray();
+        let maximumCapacuty = 0;
+        let actualCapacity = 0;
+
+        for (let i = 0; i < ballsList.length; ++i)
+            if (ballsList[i].idBuilding == buildingId) {
+                maximumCapacuty += ballsList[i].maxCapacity;
+                actualCapacity += ballsList[i].capcacity;
+            }
+
+        if (maxCapacity == 0) return 0;
+
+        return (actualCapacity / maxCapacity) * 100;
+    }
+
     async insertBuilding(building) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
@@ -48,12 +65,10 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Buildings");
-        let items = collection.find().toArray();
-        for (let i = 0; i < items.length(); ++i)
-            if (items[i].id == buildingId) {
+        let items = await collection.find().toArray();
+        for (let i = 0; i < items.length; ++i)
+            if (items[i].id == buildingId)
                 return items[i];
-                break;
-            }
         return null;
     }
 
@@ -61,7 +76,11 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Buildings");
-        return collection.find().toArray();
+
+        let retArray = await collection.find().toArray();
+        for (building in retArray) {
+            building.status = await this.calculateOccupancy(building.id);
+        }
     }
 
     async updateBuilding(newBuilding) {
@@ -97,7 +116,7 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Balls");
-        return collection.find().toArray();
+        return await collection.find().toArray();
     }
 
     async updateBalls(newBall) {

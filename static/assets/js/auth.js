@@ -33,19 +33,20 @@ function logout(){
     generate_logged_user_functionalities();
 }
 
-async function get_logged_user(){
+async function check_logged_user(){
     let auth_cookie = getCookie("auth");
     if(auth_cookie){
         auth_cookie = atob(auth_cookie).split("&");
         if(auth_cookie.length!==2) return false;
         let result = await http_post_async("/api/login", {username: auth_cookie[0], password: auth_cookie[1]});
-        return result;
+        if(result.status===200)
+            return true;
     }
     return false;
 }
 
 async function generate_logged_user_functionalities() {
-    let logged_user = await get_logged_user();
+    let logged_user = await check_logged_user();
     toggle_if_exists("login_action", logged_user);
     toggle_if_exists("logout_action", !logged_user);
     toggle_if_exists("register_action", logged_user);
