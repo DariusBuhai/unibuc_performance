@@ -42,7 +42,25 @@
                     </div>
                     <div class="card m-2">
                         <div class="card-body">
-                            <h1>General information</h1>
+                            <h1>Live informations &nbsp;<i class="fas fa-circle text-danger"></i></h1>
+                            <div>
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>People in the building</td>
+                                        <td id="people_live">generating...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Safety coefficient</td>
+                                        <td id="safety_coefficient">generating...</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h1>General informations</h1>
                             <table class="table">
                                 <tbody>
                                 <tr>
@@ -55,11 +73,11 @@
                                 </tr>
                                 <tr>
                                     <td>Number of active hotspots</td>
-                                    <td id="active-hotspots">calculating...</td>
+                                    <td id="active_hotspots_no">calculating...</td>
                                 </tr>
                                 <tr>
                                     <td>Maximum capacity</td>
-                                    <td id="max-capacity">calculating...</td>
+                                    <td id="max_capacity">calculating...</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -67,16 +85,15 @@
                     </div>
                     <div class="card m-2">
                         <div class="card-body">
-                            <h1>Live information</h1>
-                            <div>
-                                <div class="piece_of_info">
-                                    <p class="prop">People number in this moment</p>
-                                    <p id="people-in-this-moment">calculating...</p>
-                                </div>
-                                <div class="piece_of_info">
-                                    <p class="prop">Safety coefficient</p>
-                                    <p id="safety-coefficient">calculating...</p>
-                                </div>
+                            <h1>Active Hot Spots &nbsp;<i class="fas fa-circle text-success"></i></h1>
+                            <br>
+                            <div class="row">
+                                <p class="col-sm-4 text-left" style="font-size: 14px"><b>Location</b></p>
+                                <p class="col-sm-3 text-left" style="font-size: 14px"><b>Active</b></p>
+                                <p class="col-sm-5 text-left" style="font-size: 14px"><b>Available</b></p>
+                            </div>
+                            <div id="active_hotspots">
+                                Loading Hot spots...
                             </div>
                         </div>
                     </div>
