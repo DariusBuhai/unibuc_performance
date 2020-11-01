@@ -21,7 +21,7 @@ async function generate_buildings(){
         let view_buildings = generate_dom("<ul class=\"list-group list-group-flush list-group-careers\"></ul>", true);
         for(let i=0;i<category_buildings.length;i++){
             let view_building = generate_dom("<li class=\"list-group-item\">\n" +
-                "                                    <a href=\"model?id=[ID]\" target=\"_blank\">[NAME]</a>\n" +
+                "                                    <a href=\"model?id=[ID]\">[NAME]</a>\n" +
                 "                                    <div class=\"small\">[STATUS]</div>\n" +
                 "                                </li>");
             view_building = parse_dom(view_building.cloneNode(true), {
