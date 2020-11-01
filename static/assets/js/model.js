@@ -102,7 +102,7 @@ async function loadBalls() {
     addSphere(ball);
   }
 
-  setInterval(updateBalls, 2500);
+  setInterval(updateBalls, 1000);
 }
 
 function getColorFromPercentage(perc) {
