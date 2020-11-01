@@ -1,17 +1,17 @@
 const ip = require('interpolating-polynomial');
-//const db = require('./modules/dataset.js');
+const db = require('./dataset.js');
 
 class Prediction {
 
-    async makePrediction() {
-        let dataset = await db.getEventsList();
+    async makePrediction(idBuilding) {
+        let dataset = await db.prototype.getEventsList();
         let points = [];
 
-        for(let i = 0; i < dataset.length(); ++i) {
-            points.push([i, dataset[i].peopleAmount]);
-        }
+        for(let i = 0; i < dataset.length; ++i)
+            if(dataset[i].idBuilding==idBuilding)
+                points.push([i, dataset[i].peopleAmount]);
 
-        f = ip(points);
+        let f = ip(points);
 
         let date = new Date();
         return f(date.getHours());

@@ -81,11 +81,11 @@ app.post('/api/login', async (req, res) => {
 });
 
 /** chart */
-app.get('/api/chart', async(req, res) => {
-  res.send(await dataset.prototype.getEventByHour());
+app.get('/api/chart/:id', async(req, res) => {
+  res.send(await dataset.prototype.getEventByHour(req.params.id));
 });
 
 /** prediction */
-app.get('api/prediction', async(req, res) => {
-  res.send(await prediction.prototype.makePrediction());
+app.get('/api/prediction/:id', async(req, res) => {
+  res.send(await prediction.prototype.makePrediction(req.params.id));
 });

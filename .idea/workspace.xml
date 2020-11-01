@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cbc0bad3-b0aa-4e26-b7bf-7d486a8bb0ef" name="Default Changelist" comment="cladire noua">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dataset.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/prediction.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/prediction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
