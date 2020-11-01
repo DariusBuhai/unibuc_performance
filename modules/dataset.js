@@ -39,13 +39,13 @@ class Dataset {
 
     // crud Buildings
     async calculateOccupancy(buildingId) {
-        let ballsList = await db.getBalls().toArray();
-        let maximumCapacuty = 0;
+        let ballsList = await this.getBalls();
+        let maxCapacity = 0;
         let actualCapacity = 0;
 
         for (let i = 0; i < ballsList.length; ++i)
             if (ballsList[i].idBuilding == buildingId) {
-                maximumCapacuty += ballsList[i].maxCapacity;
+                maxCapacity += ballsList[i].maxCapacity;
                 actualCapacity += ballsList[i].capcacity;
             }
 
@@ -77,10 +77,10 @@ class Dataset {
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Buildings");
 
-        let retArray = await collection.find().toArray();
-        for (building in retArray) {
+        let buildings = await collection.find().toArray();
+        for (let building of buildings)
             building.status = await this.calculateOccupancy(building.id);
-        }
+        return buildings;
     }
 
     async updateBuilding(newBuilding) {
