@@ -1,18 +1,28 @@
 var myViewerDiv = document.getElementById('MyViewerDiv');
 var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
 var options = {
-    'env': 'Local',
-    'document': 'models/House/f0224dd3-8767-45c1-ff99-5c9c881b9fee/0.svf',
+    env: 'Local',
+    document: null,
 };
-
 let perc = 0;
 let dir = "up";
 let spheres = {};
 
+let url_string = window.location.href
+let url = new URL(url_string);
+let buildingId = url.searchParams.get("id");
+
+async function get_model_details(){
+    let building_details = await http_get_async("/api/building/"+buildingId, true);
+    options.document = "models/"+building_details.svfLink;
+    document.getElementById("building_name").innerText = building_details.name;
+    document.getElementById("building_address").innerText = building_details.address;
+}
+
 function load_model(){
-  Autodesk.Viewing.Initializer(options, function () {
-      viewer.start(options.document, options);
-  });
+    Autodesk.Viewing.Initializer(options, function () {
+        viewer.start(options.document, options);
+    });
 }
 
 function addNewButton() {
@@ -166,12 +176,14 @@ function addSphereOnClick(event) {
   }
 }
 
-load_model();
-generate_hour_chart();
+async function initiate_model(){
+    await get_model_details();
+    load_model();
+    generate_hour_chart();
+    viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+    viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
+    document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    setInterval(updateBalls, 500);
+}
 
-viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
-viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
-document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
-
-
-setInterval(updateBalls, 500);
+initiate_model();

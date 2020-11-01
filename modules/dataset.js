@@ -48,12 +48,10 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Buildings");
-        let items = collection.find().toArray();
-        for (let i = 0; i < items.length(); ++i)
-            if (items[i].id == buildingId) {
+        let items = await collection.find().toArray();
+        for (let i = 0; i < items.length; ++i)
+            if (items[i].id == buildingId)
                 return items[i];
-                break;
-            }
         return null;
     }
 
