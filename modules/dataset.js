@@ -187,8 +187,10 @@ class Dataset {
         let collection = dbo.collection('Events');
         let items = await collection.find({idBuilding: parseInt(idBuilding)}).toArray();
 
+        let date = new Date();
         for (let x of items)
-            retVal[x.time] += x.peopleAmount;
+            if (x.time < date.getHours())
+                retVal[x.time] += x.peopleAmount;
 
         return retVal;
     }
