@@ -1,6 +1,7 @@
 const url = "mongodb+srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mongodb.net/Cluster0?retryWrites=true&w=majority";
 const MongoClient = require('mongodb').MongoClient;
 const bcrypt = require('bcrypt');
+const ip = require('interpolating-polynomial');
 
 // Buildings:
 // id #
@@ -120,6 +121,19 @@ class Dataset {
         await collection.updateOne({ id: parseInt(newBall.id), buildingId: parseInt(newBall.buildingId) }, newBall);
     }
 
+    // prediction
+    async makePrediction(idBuilding) {
+        let dataset = await this.getEventsList(idBuilding);
+        let points = [];
+        let date = new Date();
+
+        for(let i = 0; i < dataset.length; ++i)
+            if (dataset[i].time < date.getHours())
+                points.push([i, dataset[i].peopleAmount]);
+
+        let f = ip(points);
+        return f(date.getHours());
+    }
 
     // crud Events
 
@@ -166,10 +180,9 @@ class Dataset {
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Events');
         let items = await collection.find().toArray();
-        retVal = items.filter((ev) => {
-                return ev.idBuilding() == idBuilding;
+        let retVal = items.filter((ev) => {
+                return ev.idBuilding == idBuilding;
         });
-              
         return retVal;
     }
 

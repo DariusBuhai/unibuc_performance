@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const port = process.env.PORT || 3000;
 
 const dataset = require("./modules/dataset.js");
-const prediction = require("./modules/prediction.js");
+//const prediction = require("./modules/prediction.js");
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -75,7 +75,7 @@ app.post('/api/login', async (req, res) => {
   if (user == null)
     return res.status(400).send('User not found');
   if (await bcrypt.compare(req.body.password, user.password))
-    res.status(200).send('Authentication succeeded')
+    res.status(200).send(user.id)
   else
     res.status(401).send('Wrong password');
 });
@@ -91,5 +91,5 @@ app.get('/api/chart/:id', async(req, res) => {
 
 /** prediction */
 app.get('/api/prediction/:id', async(req, res) => {
-  res.send(await prediction.prototype.makePrediction(req.params.id));
+  res.send(await dataset.prototype.makePrediction(req.params.id));
 });

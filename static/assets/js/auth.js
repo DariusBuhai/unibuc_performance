@@ -45,6 +45,18 @@ async function check_logged_user(){
     return false;
 }
 
+async function get_logged_user_id(){
+    let auth_cookie = getCookie("auth");
+    if(auth_cookie){
+        auth_cookie = atob(auth_cookie).split("&");
+        if(auth_cookie.length!==2) return false;
+        let result = await http_post_async("/api/login", {username: auth_cookie[0], password: auth_cookie[1]});
+        if(result.status===200)
+            return result.responseText;
+    }
+    return false;
+}
+
 async function generate_logged_user_functionalities() {
     let logged_user = await check_logged_user();
     toggle_if_exists("login_action", logged_user);
