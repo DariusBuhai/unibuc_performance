@@ -95,6 +95,7 @@ function addSphere(ball, insertBall = false) {
   }
 }
 
+
 function getColorFromPercentage(perc) {
   let green = Math.floor(255 * (1 - perc)) << (8 * 1);
   let red = Math.floor(255 * perc) << (8 * 2);
@@ -125,6 +126,12 @@ async function reloadBalls(add = true) {
 
     set_value_by_id("active_hotspots_no", balls.length);
     for (ball of balls) {
+        if (!ball) continue;
+        if (!ball.show && spheres[parseInt(ball.id)]) {
+            viewer.overlays.removeMesh(spheres[parseInt(ball.id)], 'scene1');
+            spheres[parseInt(ball.id)] = null;
+            continue;
+        }
         ballsViewer.appendChild(parse_dom(ballViewer.cloneNode(true), {
             LOCATION: ball.name,
             ACTIVE: ball.capacity,
@@ -148,7 +155,7 @@ async function reloadBalls(add = true) {
 
 async function delete_ball(id){
     if(user_is_logged){
-        http_delete("/api/balls/"+id+"/"+user_id, function(res){
+        http_delete("/api/balls/"+id+"/"+buildingId+"/"+user_id, function(res){
             console.log(res);
             reloadBalls(false);
         });
@@ -226,6 +233,7 @@ function addSphereOnClick(event) {
       name: name,
       maxCapacity: capacity,
       capacity: 0,
+      show: true,
     }
 
     if (ball.name && ball.maxCapacity) {

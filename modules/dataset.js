@@ -122,6 +122,13 @@ class Dataset {
         await collection.updateOne({ id: parseInt(newBall.id), buildingId: parseInt(newBall.buildingId) }, newBall);
     }
 
+    async deleteBall(id, buildingId) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('Balls');
+        await collection.updateOne({ id: parseInt(id), buildingId: parseInt(buildingId) }, {$set: {show: false}});
+    }
+
     // prediction
     async makePrediction(idBuilding) {
         let db = await MongoClient.connect(url);

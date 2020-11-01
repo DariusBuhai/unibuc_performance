@@ -1,6 +1,5 @@
 
 function parse_dom(dom, key_rep){
-    console.log(dom);
     for(const [key, value] of Object.entries(key_rep))
         dom.innerHTML = dom.innerHTML.replace("["+key+"]", value);
     return dom;
