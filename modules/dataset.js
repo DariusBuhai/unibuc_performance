@@ -40,19 +40,17 @@ class Dataset {
 
     // crud Buildings
     async calculateOccupancy(buildingId) {
-        let ballsList = await this.getBalls();
+        let ballsList = await this.getBalls(buildingId);
         let maxCapacity = 0;
         let actualCapacity = 0;
 
-        for (let i = 0; i < ballsList.length; ++i)
-            if (ballsList[i].idBuilding == buildingId) {
-                maxCapacity += ballsList[i].maxCapacity;
-                actualCapacity += ballsList[i].capcacity;
-            }
+        for (let i = 0; i < ballsList.length; ++i) {
+            maxCapacity += parseInt(ballsList[i].maxCapacity);
+            actualCapacity += parseInt(ballsList[i].capacity);
+        }
 
         if (maxCapacity == 0) return 0;
-
-        return (actualCapacity / maxCapacity) * 100;
+        return Math.floor((parseFloat(actualCapacity) / parseFloat(maxCapacity)) * 100);
     }
 
     async insertBuilding(building) {
