@@ -110,13 +110,12 @@ function updateBalls() {
 
 function generate_hour_chart(){
     let date = new Date();
-    let currHour = 24;//date.getHours();
+    let lastXDays = 10;
     let pastContainer = document.getElementById('past');
     let hours = {};
 
-    for (let i = 0; i < currHour; ++i){
+    for (let i = 0; i < lastXDays; ++i)
         hours[i] = Math.floor(Math.random() * 100);
-    }
     console.log(hours);
 
     var ctx = document.getElementById('myChart').getContext('2d');
