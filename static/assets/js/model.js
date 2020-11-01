@@ -71,20 +71,27 @@ function toggleButton(id) {
   }
 }
 
-function addSphere(ball) {        
+function addSphere(ball, insertBall = false) {        
   var material = new THREE.MeshBasicMaterial({ color: getColorFromPercentage(
     parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)) });
-  var geom = new THREE.SphereGeometry(20, 20);
+  var geom = new THREE.SphereGeometry(10, 10);
   var sphereMesh = new THREE.Mesh(geom, material);
 
   sphereMesh.position.set(ball.x, ball.y, ball.z);
-  sphereMesh.ballId = Object.keys(spheres).length + 1;
+  sphereMesh.ballId = ball.id;
   spheres[sphereMesh.ballId] = sphereMesh;
 
   if (!viewer.overlays.hasScene('scene1')) {
     viewer.overlays.addScene('scene1');
   }
   viewer.overlays.addMesh(sphereMesh, 'scene1');
+
+  if (insertBall) {
+    http_post_async('/api/balls', {
+        ball: ball,
+        user_id: user_id,
+    });
+  }
 }
 
 async function loadBalls() {
@@ -173,7 +180,26 @@ function getClickCoordinates(event) {
 function addSphereOnClick(event) {
   coord = getClickCoordinates(event);
   if (isButtonActive('hotspot-tool') && coord) {
-    addSphere(coord);
+
+    let name = prompt("New area name");
+    if (!name) return;
+    let capacity = prompt("New area capacity");
+    if (!capacity) return;
+
+    ball = {
+      id: Object.keys(spheres).length + 1,
+      buildingId: parseInt(buildingId),
+      x: coord.x,
+      y: coord.y,
+      z: coord.z,
+      name: name,
+      maxCapacity: capacity,
+      capacity: 0,
+    }
+
+    if (ball.name && ball.maxCapacity) {
+      addSphere(ball, true);
+    }
   }
 }
 
@@ -183,9 +209,11 @@ async function initiate_model(){
     await predict_next_occupancies();
     viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
     load_model();
-    if(user_is_logged)
-        viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
-    document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    generate_hour_chart();
+    if(user_is_logged) {
+      viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+      document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    }
 }
 
 initiate_model();
