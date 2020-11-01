@@ -1,6 +1,7 @@
 const url = "mongodb+srv://unibuc_performance:smarthack_2020@cluster0.lsba1.mongodb.net/Cluster0?retryWrites=true&w=majority";
 const MongoClient = require('mongodb').MongoClient;
 const bcrypt = require('bcrypt');
+const ip = require('interpolating-polynomial');
 
 // Buildings:
 // id #
@@ -17,12 +18,11 @@ const bcrypt = require('bcrypt');
 // peopleAmount
 
 // Balls:
-// idBall
-// name
-// idBuilding
-// xCoord
-// yCoord
-// zCoord
+// id
+// buildingId
+// x
+// y
+// z
 // maxCapacity
 // capacity
 
@@ -57,14 +57,14 @@ class Dataset {
     async insertBuilding(building) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Buildings');
+        let collection = dbo.collection('Buildings');
         await collection.insert(building);
     }
 
     async getBuilding(buildingId) {
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection("Buildings");
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection("Buildings");
         let items = await collection.find().toArray();
         for (let i = 0; i < items.length; ++i)
             if (items[i].id == buildingId)
@@ -74,8 +74,8 @@ class Dataset {
 
     async getBuildings(){
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection("Buildings");
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection("Buildings");
 
         let buildings = await collection.find().toArray();
         for (let building of buildings)
@@ -86,53 +86,61 @@ class Dataset {
     async updateBuilding(newBuilding) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Buildings');
+        let collection = dbo.collection('Buildings');
         await collection.updateOne({ id: newBuilding.id }, newBuilding);
     }
 
 
     // crud Balls
-    async insertBalls(ball) {
+    async insertBall(ball) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Balls');
+        let collection = dbo.collection('Balls');
         await collection.insert(ball);
     }
 
-    async getBalls(ballId) {
-        let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection("Balls");
-        let items = collection.find().toArray();
-        for (let i = 0; i < items.length(); ++i)
-            if (items[i].id == ballId) {
-                return items[i];
-                break;
-            }
-        return null;
-    }
-
-    async getBalls() {
-        let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection("Balls");
-        return await collection.find().toArray();
-    }
-
-    async updateBalls(newBall) {
+    async getBall(id, buildingId) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Balls');
-        await collection.updateOne({ id: newBall.id }, newBall);
+        let collection = dbo.collection("Balls");
+        let item = collection.find({id: parseInt(id), buildingId: parseInt(buildingId)});
+        return item
     }
 
+    async getBalls(buildingId) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection("Balls");
+        return await collection.find({buildingId: parseInt(buildingId)}).toArray();
+    }
+
+    async updateBall(newBall) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('Balls');
+        await collection.updateOne({ id: parseInt(newBall.id), buildingId: parseInt(newBall.buildingId) }, newBall);
+    }
+
+    // prediction
+    async makePrediction(idBuilding) {
+        let dataset = await this.getEventsList(idBuilding);
+        let points = [];
+        let date = new Date();
+
+        for(let i = 0; i < dataset.length; ++i)
+            if (dataset[i].time < date.getHours())
+                points.push([i, dataset[i].peopleAmount]);
+
+        let f = ip(points);
+        return f(date.getHours());
+    }
 
     // crud Events
 
     async insertEvents(event) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Events');
+        let collection = dbo.collection('Events');
         await collection.insert(event);
     }
 
@@ -157,8 +165,8 @@ class Dataset {
         let retVal = Array(24).fill(0);
 
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection('Events');
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('Events');
         let items = await collection.find({idBuilding: idBuilding}).toArray();
 
         for (let x of items)
@@ -169,20 +177,19 @@ class Dataset {
 
     async getEventsList(idBuilding) {
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection('Events');
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('Events');
         let items = await collection.find().toArray();
         let retVal = items.filter((ev) => {
                 return ev.idBuilding == idBuilding;
         });
-              
         return retVal;
     }
 
     async updateEvents(newEvent) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
-        let collection = await dbo.collection('Events');
+        let collection = dbo.collection('Events');
         await collection.updateOne({ id: newEvents.id }, newEvent);
     }
 
@@ -193,8 +200,8 @@ class Dataset {
         let retVal = false;
 
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection('LicenseKeys');
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('LicenseKeys');
         let items = await collection.find().toArray();
         for (let i = 0; i < items.length; ++i)
             if (await bcrypt.compare(license, items[i].licenseKey)) {
@@ -209,15 +216,15 @@ class Dataset {
 
     async getAllUsers() {
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
+        let dbo = db.db("smarthack");
         let result = await dbo.collection("Users").find().toArray();
         return result;
     }
 
     async addUsers(user) {
         let db = await MongoClient.connect(url);
-        let dbo = await db.db("smarthack");
-        let collection = await dbo.collection('Users');
+        let dbo = db.db("smarthack");
+        let collection = dbo.collection('Users');
         await collection.insert(user);
     }
 }
