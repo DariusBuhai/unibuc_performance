@@ -22,6 +22,11 @@ async function get_model_details(){
     document.getElementById("building_address").innerText = building_details.address;
 }
 
+async function predict_next_occupancies(){
+    let prediction = await http_get_async("api/prediction/"+buildingId, true);
+    document.getElementById("occupancies_predicted").innerText = prediction;
+}
+
 function load_model(){
     Autodesk.Viewing.Initializer(options, function () {
         viewer.start(options.document, options);
@@ -125,7 +130,7 @@ async function generate_hour_chart(){
         data: {
             labels: Object.keys(hours),
             datasets: [{
-                label: '# of Votes',
+                label: '# of People',
                 data: Object.values(hours),
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -174,10 +179,10 @@ function addSphereOnClick(event) {
 
 async function initiate_model(){
     await get_model_details();
+    await generate_hour_chart();
+    await predict_next_occupancies();
     viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
-
     load_model();
-    generate_hour_chart();
     if(user_is_logged)
         viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
     document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
