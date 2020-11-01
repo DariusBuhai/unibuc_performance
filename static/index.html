@@ -17,8 +17,9 @@
         <main>
             <nav class="navbar navbar-marketing navbar-expand-lg transparent navbar-dark fixed-top">
                 <div class="container mt-3 mb-3">
-                    <a class="text-white" href="login.html"><i class="fas fa-user"></i> &nbsp;Login</a>
-                    <a class="text-white" href="register.html"><i class="fas fa-user-plus"></i> &nbsp;Create account</a>
+                    <a class="text-white btn btn-link" href="login" id="login_action"><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a>
+                    <button class="text-white btn btn-link" onclick="logout()" id="logout_action" hidden><i class="fas fa-sign-out-alt"></i> &nbsp;Logout</button>
+                    <a class="text-white btn btn-link" href="register" id="register_action"><i class="fas fa-user-plus"></i> &nbsp;Create account</a>
                 </div>
             </nav>
             <header class="page-header page-header-dark bg-gradient-primary-to-secondary">
