@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const port = process.env.PORT || 3000;
 
 const dataset = require("./modules/dataset.js");
+const prediction = require("./modules/prediction.js");
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -80,6 +81,11 @@ app.post('/api/login', async (req, res) => {
 });
 
 /** chart */
-app.get('/ati/chart', async(req, res) => {
-  return await dataset.prototype.getEventByHour();
+app.get('/api/chart', async(req, res) => {
+  res.send(await dataset.prototype.getEventByHour());
+});
+
+/** prediction */
+app.get('api/prediction', async(req, res) => {
+  res.send(await prediction.prototype.makePrediction());
 });
