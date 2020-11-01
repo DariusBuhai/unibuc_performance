@@ -159,7 +159,7 @@ async function generate_hour_chart(){
     let hours_values = await http_get_async("/api/chart/"+buildingId, true);
 
     let hours = {};
-    for (let i = 0; i < hours_values.length; ++i)
+    for (let i = 0; i < hours_values.length; ++i) 
         hours[i] = hours_values[i];
 
     var ctx = document.getElementById('myChart').getContext('2d');
