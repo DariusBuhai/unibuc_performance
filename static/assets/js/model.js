@@ -68,7 +68,7 @@ function addSphere(ball) {
   var sphereMesh = new THREE.Mesh(geom, material);
 
   sphereMesh.position.set(ball.x, ball.y, ball.z);
-  sphereMesh.ballId = Object.keys(spheres).length + 1;
+  sphereMesh.ballId = ball.id;
   spheres[sphereMesh.ballId] = sphereMesh;
 
   if (!viewer.overlays.hasScene('scene1')) {
@@ -163,7 +163,26 @@ function getClickCoordinates(event) {
 function addSphereOnClick(event) {
   coord = getClickCoordinates(event);
   if (isButtonActive('hotspot-tool') && coord) {
-    addSphere(coord);
+
+    let name = prompt("New area name");
+    if (!name) return;
+    let capacity = prompt("New area capacity");
+    if (!capacity) return;
+
+    ball = {
+      id: Object.keys(spheres).length + 1,
+      buildingId: buildingId,
+      x: coord.x,
+      y: coord.y,
+      z: coord.z,
+      name: name,
+      maxCapacity: capacity,
+      capacity: 0,
+    }
+
+    if (ball.name && ball.maxCapacity) {
+      addSphere(ball);
+    }
   }
 }
 
