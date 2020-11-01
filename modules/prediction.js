@@ -4,11 +4,11 @@ const db = require('modules/dataset.js');
 class Prediction {
 
     makePrediction(hourValue) {
-        let dataset = db.getHoursList();
+        let dataset = db.getEventsList();
         let points = [];
 
         for(let i = 0; i < dataset.length(); ++i) {
-            points.push([i, dataset[i].date.getHours()]);
+            points.push([i, dataset[i].peopleAmount]);
         }
 
         f = ip(points);
