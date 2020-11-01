@@ -3,7 +3,7 @@ const db = require('modules/dataset.js');
 
 class Prediction {
 
-    async makePrediction(hourValue) {
+    async makePrediction() {
         let dataset = await db.getEventsList();
         let points = [];
 
@@ -13,7 +13,8 @@ class Prediction {
 
         f = ip(points);
 
-        return f(hourValue);
+        let date = new Date();
+        return f(date.getHours());
     }
 }
 
