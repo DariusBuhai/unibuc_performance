@@ -17,8 +17,8 @@ const bcrypt = require('bcrypt');
 // peopleAmount
 
 // Balls:
-// idBall
-// idBuilding
+// id
+// buildingId
 // xCoord
 // yCoord
 // zCoord
@@ -73,38 +73,33 @@ class Dataset {
 
 
     // crud Balls
-    async insertBalls(ball) {
+    async insertBall(ball) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = await dbo.collection('Balls');
         await collection.insert(ball);
     }
 
-    async getBalls(ballId) {
+    async getBall(id, buildingId) {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Balls");
-        let items = collection.find().toArray();
-        for (let i = 0; i < items.length(); ++i)
-            if (items[i].id == ballId) {
-                return items[i];
-                break;
-            }
-        return null;
+        let item = collection.find({id: id, buildingId: buildingId});
+        return item
     }
 
-    async getBalls() {
+    async getBalls(buildingId) {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection("Balls");
-        return collection.find().toArray();
+        return collection.find({buildingId: buildingId}).toArray();
     }
 
-    async updateBalls(newBall) {
+    async updateBall(newBall) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = await dbo.collection('Balls');
-        await collection.updateOne({ id: newBall.id }, newBall);
+        await collection.updateOne({ id: newBall.id, buildingId: newBall.buildingId }, newBall);
     }
 
 

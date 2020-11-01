@@ -68,6 +68,11 @@ function addSphere(coord, color = 0xff0000) {
   viewer.overlays.addMesh(sphereMesh, 'scene1');
 }
 
+// function loadBalls() {
+//   console.log('view loaded');
+//   http_get('/balls/?buldingId=?'
+// }
+
 
 function getColorFromPercentage(perc) {
   let green = Math.floor(255 * perc) << (8 * 1);
@@ -80,7 +85,6 @@ function updateBalls() {
   for (key in spheres) {
     // TODO update spheres color
     spheres[key].material.color.setHex(getColorFromPercentage(perc));
-    console.log(spheres[key].material.color);
   }
   viewer.refresh();
 
@@ -166,6 +170,7 @@ load_model();
 generate_hour_chart();
 
 viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
 document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
 
 

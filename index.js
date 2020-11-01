@@ -75,3 +75,7 @@ app.post('/api/login', async (req, res) => {
   else
     res.status(401).send('Wrong password');
 });
+
+app.get('/api/balls', async (req, res) => {
+  res.status(200).send(await dataset.prototype.getBalls(req.params.buildingId));
+});
