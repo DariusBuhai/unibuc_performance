@@ -66,8 +66,11 @@ class Dataset {
         let collection = dbo.collection("Buildings");
         let items = await collection.find().toArray();
         for (let i = 0; i < items.length; ++i)
-            if (items[i].id == buildingId)
+            if (items[i].id == buildingId){
+                items[i].safety = 100 - await this.calculateOccupancy(buildingId);
+                //items[i].active_hotspots = 100 - await this.calculateOccupancy(buildingId);
                 return items[i];
+            }
         return null;
     }
 
@@ -123,7 +126,7 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Balls');
-        await collection.updateOne({ id: parseInt(newBall.id), buildingId: parseInt(newBall.buildingId) }, {$set: {show: false}});
+        await collection.updateOne({ id: parseInt(id), buildingId: parseInt(buildingId) }, {$set: {show: false}});
     }
 
     // prediction

@@ -20,11 +20,12 @@ async function get_model_details(){
     options.document = "models/"+building_details.svfLink;
     document.getElementById("building_name").innerText = building_details.name;
     document.getElementById("building_address").innerText = building_details.address;
+    document.getElementById("safety_coefficient").innerText = building_details.safety+"%";
 }
 
 async function predict_next_occupancies(){
     let prediction = await http_get_async("api/prediction/"+buildingId, true);
-    document.getElementById("occupancies_predicted").innerText = prediction;
+    document.getElementById("occupancies_predicted").innerText = Math.floor(prediction);
 }
 
 function load_model(){
@@ -94,17 +95,6 @@ function addSphere(ball, insertBall = false) {
   }
 }
 
-async function loadBalls() {
-  console.log('view loaded');
-  let balls = await http_get_async(`/api/balls/${buildingId}`, true);
-  console.log('in load')
-  for (ball of balls) {
-    if (!ball.show) continue;
-    addSphere(ball);
-  }
-
-  setInterval(updateBalls, 1000);
-}
 
 function getColorFromPercentage(perc) {
   let green = Math.floor(255 * (1 - perc)) << (8 * 1);
@@ -113,21 +103,63 @@ function getColorFromPercentage(perc) {
 }
 
 
-async function updateBalls() {
-  let balls = await http_get_async(`/api/balls/${buildingId}`, true);
-  for (ball of balls) {
-    // TODO update spheres color
-    if (!ball) continue;
-    if (!ball.show) {
-        viewer.overlays.remove(spheres[parseInt(ball.id)]);
-        spheres[parseInt(ball.id)] = null;
-        continue;
+async function reloadBalls(add = true) {
+    let balls = await http_get_async(`/api/balls/${buildingId}`, true);
+    let maxCapacity = 0, peopleInThisMoment = 0;
+    let ballsViewer = document.getElementById("active_hotspots");
+    ballsViewer.innerHTML = "";
+    let ballViewer = null;
+    if(user_is_logged){
+        ballViewer = generate_dom("<div class='row'>"+
+            "                                        <p class='col-sm-4 text-left'>[LOCATION]</p>\n" +
+            "                                        <p class='col-sm-3 text-left'>[ACTIVE]</p>\n" +
+            "                                        <p class='col-sm-3 text-left'>[AVAILABLE]</p>\n" +
+            "                                        <div class='col-sm-2 text-left'><button class=\"btn btn-link\" onclick=\"delete_ball([ID])\"><i class='fas fa-trash'></i></button></div>\n" +
+            "                                    </div>", false);
+    }else{
+        ballViewer = generate_dom("<div class='row'>"+
+            "                                        <p class='col-sm-4 text-left'>[LOCATION]</p>\n" +
+            "                                        <p class='col-sm-3 text-left'>[ACTIVE]</p>\n" +
+            "                                        <p class='col-sm-5 text-left'>[AVAILABLE]</p>\n" +
+            "                                    </div>", false);
     }
-    spheres[parseInt(ball.id)].material.color.setHex(getColorFromPercentage(
-      parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)
-    ));
-  }
-  viewer.refresh();
+
+    set_value_by_id("active_hotspots_no", balls.length);
+    for (ball of balls) {
+        if (!ball) continue;
+        if (!ball.show && spheres[parseInt(ball.id)]) {
+            viewer.overlays.removeMesh(spheres[parseInt(ball.id)], 'scene1');
+            spheres[parseInt(ball.id)] = null;
+            continue;
+        }
+        ballsViewer.appendChild(parse_dom(ballViewer.cloneNode(true), {
+            LOCATION: ball.name,
+            ACTIVE: ball.capacity,
+            AVAILABLE: ball.maxCapacity,
+            ID: ball.id,
+        }));
+        if(add)
+            addSphere(ball);
+        else {
+            spheres[parseInt(ball.id)].material.color.setHex(getColorFromPercentage(
+                parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)
+            ));
+        }
+        maxCapacity += parseInt(ball.maxCapacity);
+        peopleInThisMoment += parseInt(ball.capacity);
+    }
+    set_value_by_id("max_capacity", maxCapacity);
+    set_value_by_id("people_live", peopleInThisMoment);
+    viewer.refresh();
+}
+
+async function delete_ball(id){
+    if(user_is_logged){
+        http_delete("/api/balls/"+id+"/"+buildingId+"/"+user_id, function(res){
+            console.log(res);
+            reloadBalls(false);
+        });
+    }
 }
 
 async function generate_hour_chart(){
@@ -214,7 +246,10 @@ async function initiate_model(){
     await get_model_details();
     await generate_hour_chart();
     await predict_next_occupancies();
-    viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, loadBalls);
+    viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, reloadBalls);
+    setInterval(function(){
+        reloadBalls(false);
+    }, 4000);
     load_model();
     generate_hour_chart();
     if(user_is_logged) {

@@ -100,12 +100,12 @@ app.post('/api/balls', async (req, res) => {
   res.status(200).send(await dataset.prototype.insertBall(req.body.ball));
 });
 
-app.delete('/api/balls', async (req, res) => {
-  if (!req.body.user_id) {
+app.delete('/api/balls/:id/:bid/:uid', async (req, res) => {
+  if (!req.params.uid) {
     res.status(404).send();
   }
 
-  res.status(200).send(await dataset.prototype.insertBall(req.body.ball));
+  res.status(200).send(await dataset.prototype.deleteBall(req.params.id, req.params.bid));
 });
 
 /** chart */

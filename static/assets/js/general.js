@@ -161,3 +161,7 @@ function append_if_exists(id, html){
     if(item)
         item.innerHTML = html;
 }
+
+function set_value_by_id(id, value){
+    document.getElementById(id).innerText = value;
+}
