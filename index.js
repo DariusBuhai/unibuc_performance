@@ -84,10 +84,19 @@ app.get('/api/balls/:id', async (req, res) => {
   res.status(200).send(await dataset.prototype.getBalls(req.params.id));
 });
 
+app.post('/api/events', async (req, res) => {
+  if (!req.body.user_id) {
+    res.status(404).send();
+  }
+
+  res.status(200).send(await dataset.prototype.insertEvent(req.body.event));
+});
+
 app.post('/api/balls', async (req, res) => {
   if (!req.body.user_id) {
     res.status(404).send();
   }
+
   res.status(200).send(await dataset.prototype.insertBall(req.body.ball));
 });
 

@@ -98,7 +98,6 @@ async function loadBalls() {
   console.log('view loaded');
   let balls = await http_get_async(`/api/balls/${buildingId}`, true);
   console.log('in load')
-  console.log(balls)
   for (ball of balls) {
     addSphere(ball);
   }
