@@ -7,16 +7,23 @@ const bcrypt = require('bcrypt');
 // adminId #
 // name
 // address
-// hotspotNo
-// maxCap
+// category
 // modelLink
-// svgLink
+// svfLink
 
-// Hours:
-// id #
-// date
-// buildingId
-// peopleNo
+// Events:
+// idBuilding
+// time (hour)
+// peopleAmount
+
+// Balls:
+// idBall
+// idBuilding
+// xCoord
+// yCoord
+// zCoord
+// maxCapacity
+// capacity
 
 // Users(Admins):
 // id #
@@ -29,15 +36,12 @@ const bcrypt = require('bcrypt');
 
 class Dataset {
 
+    // crud Buildings
     async insertBuilding(building) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Buildings', async function (err, collection) {
-                await collection.insert(building);
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Buildings');
+        await collection.insert(building);
     }
 
     async getBuilding(buildingId) {
@@ -61,83 +65,98 @@ class Dataset {
     }
 
     async updateBuilding(newBuilding) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-            var dbo = db.db("smarthack");
-            await dbo.collection('Buildings', async function (err, collection) {
-                await collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
-                    if (err) throw err;
-                });
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Buildings');
+        await collection.updateOne({ id: newBuilding.id }, newBuilding);
     }
 
-    async insertHours(hour) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.insert(hour);
-            });
-        });
+
+    // crud Balls
+    async insertBalls(ball) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Balls');
+        await collection.insert(ball);
     }
 
-    async getHours(hourId) {
+    async getBalls(ballId) {
+        let db = await MongoClient.connect(url);
+        let dbo = await db.db("smarthack");
+        let collection = await dbo.collection("Balls");
+        let items = collection.find().toArray();
+        for (let i = 0; i < items.length(); ++i)
+            if (items[i].id == ballId) {
+                return items[i];
+                break;
+            }
+        return null;
+    }
+
+    async getBalls() {
+        let db = await MongoClient.connect(url);
+        let dbo = await db.db("smarthack");
+        let collection = await dbo.collection("Balls");
+        return collection.find().toArray();
+    }
+
+    async updateBalls(newBall) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Balls');
+        await collection.updateOne({ id: newBall.id }, newBall);
+    }
+
+
+    // crud Events
+
+    async insertEvents(event) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Events');
+        await collection.insert(event);
+    }
+
+    async getEvents(eventId) {
         let retVal = null;
 
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.find().toArray(function (err, items) {
-                    if (err) throw err;
-
-                    for (let i = 0; i < items.length(); ++i)
-                        if (items[i].id == hourId) {
-                            retVal = items[i];
-                            break;
-                        }
-                });
-            });
-        });
+        let db = MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Events');
+        let items = await collection.find().toArray();
+                
+        for (let i = 0; i < items.length(); ++i)
+            if (items[i].id == eventId) {
+                retVal = items[i];
+                break;
+            }
 
         return retVal;
     }
 
-    async getHoursList(hourValue) {
-        let retVal = null;
+    async getEventsList(eventValue) {
+        let retVal = [];
 
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.find().toArray(async function (err, items) {
-                    if (err) throw err;
-
-                    retVal = items.filter((h) => {
-                        return h.date.getHours() == hourValue;
-                    });
-                });
-            });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Events');
+        let items = await collection.find().toArray();
+        retVal = items.filter((h) => {
+                return h.date.time() == eventValue;
         });
-
+              
         return retVal;
     }
 
-    async updateHours(newHour) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.updateOne({ id: newHours.id }, newHour, async function (err, res) {
-                    if (err) throw err;
-                });
-            });
-        });
+    async updateEvents(newEvent) {
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Events');
+        await collection.updateOne({ id: newEvents.id }, newEvent);
     }
+
+
+    // crud License
 
     async getLicense(license) {
         let retVal = false;
@@ -153,6 +172,9 @@ class Dataset {
             }
         return retVal;
     }
+
+
+    //crud Users
 
     async getAllUsers() {
         let db = await MongoClient.connect(url);

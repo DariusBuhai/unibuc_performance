@@ -1,15 +1,20 @@
 const ip = require('interpolating-polynomial');
 const db = require('modules/dataset.js');
 
-function makePrediction(hourValue) {
-    let dataset = db.getHoursList();
-    let points = [];
+class Prediction {
 
-    for(let i = 0; i < dataset.length(); ++i) {
-        points.push([i, dataset[i].date.getHours()]);
+    makePrediction(hourValue) {
+        let dataset = db.getEventsList();
+        let points = [];
+
+        for(let i = 0; i < dataset.length(); ++i) {
+            points.push([i, dataset[i].peopleAmount]);
+        }
+
+        f = ip(points);
+
+        return f(hourValue);
     }
-
-    f = ip(points);
-
-    return f(hourValue);
 }
+
+module.exports = Prediction;
