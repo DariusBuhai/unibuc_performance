@@ -68,7 +68,7 @@ function addSphere(coord, color = 0xff0000) {
 
 function generate_hour_chart(){
     let date = new Date();
-    let currHour = date.getHours();
+    let currHour = 24;//date.getHours();
     let pastContainer = document.getElementById('past');
     let hours = {};
 

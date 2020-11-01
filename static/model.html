@@ -5,9 +5,8 @@
     <title>View Building</title>
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <link href="assets/css/styles.css" rel="stylesheet" />
-    <link href="model_style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v7.*" type="text/css">
-    <script language="JavaScript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v7.*"></script>
+    <script type="text/javascript" src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v7.*"></script>
 
     <link href="assets/fontawesome/css/all.css" rel="stylesheet"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,24 +14,24 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
 <div id="layoutDefault">
     <div id="layoutDefault_content">
         <main>
-            <nav class="navbar navbar-marketing navbar-expand-lg bg-dark navbar-dark">
+            <nav class="navbar navbar-marketing navbar-expand-lg transparent navbar-dark fixed-top">
                 <div class="container mt-3 mb-3">
-                    <a class="text-white" href="index.html"><i class="fas fa-arrow-left"></i> &nbsp;Back Home</a>
+                    <a class="btn btn-link" href="/"><i class="fas fa-home"></i> &nbsp;Back home</a>
                 </div>
             </nav>
             <div class="row">
                 <div class="col-md-8">
                     <div id="MyViewerDiv"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="height: 85vh;overflow: scroll">
                     <div class="card m-2">
                         <div class="card-body">
                             <h1>Past Informations</h1>
@@ -87,11 +86,9 @@
         <footer class="footer pt-5 pb-5 mt-auto bg-dark footer-dark">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>
+                    <div class="col-md-6 small">Copyright &copy; @unibuc_performance</div>
                     <div class="col-md-6 text-md-right small">
-                        <a href="javascript:void(0);">Privacy Policy</a>
-                        &middot;
-                        <a href="javascript:void(0);">Terms &amp; Conditions</a>
+                        <a href="terms-conditions.html" target="_blank">Terms &amp; Conditions</a>
                     </div>
                 </div>
             </div>
