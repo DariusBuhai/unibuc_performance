@@ -127,11 +127,11 @@ async function reloadBalls(add = true) {
     set_value_by_id("active_hotspots_no", balls.length);
     for (ball of balls) {
         if (!ball) continue;
-        if (!ball.show && spheres[parseInt(ball.id)]) {
+        /*if (!ball.show && spheres[parseInt(ball.id)]) {
             viewer.overlays.removeMesh(spheres[parseInt(ball.id)], 'scene1');
             spheres[parseInt(ball.id)] = null;
             continue;
-        }
+        }*/
         ballsViewer.appendChild(parse_dom(ballViewer.cloneNode(true), {
             LOCATION: ball.name,
             ACTIVE: ball.capacity,
@@ -153,10 +153,11 @@ async function reloadBalls(add = true) {
     viewer.refresh();
 }
 
-async function delete_ball(id){
+async function delete_ball(ballId){
     if(user_is_logged){
-        http_delete("/api/balls/"+id+"/"+buildingId+"/"+user_id, function(res){
+        http_delete("/api/balls/"+ballId+"/"+buildingId+"/"+user_id, function(res){
             console.log(res);
+            viewer.overlays.removeMesh(spheres[parseInt(ballId)], 'scene1');
             reloadBalls(false);
         });
     }
