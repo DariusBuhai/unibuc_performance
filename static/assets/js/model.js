@@ -64,7 +64,7 @@ function toggleButton(id) {
 function addSphere(ball) {        
   var material = new THREE.MeshBasicMaterial({ color: getColorFromPercentage(
     parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)) });
-  var geom = new THREE.SphereGeometry(20, 20);
+  var geom = new THREE.SphereGeometry(10, 10);
   var sphereMesh = new THREE.Mesh(geom, material);
 
   sphereMesh.position.set(ball.x, ball.y, ball.z);
