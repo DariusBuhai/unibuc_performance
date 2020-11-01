@@ -38,13 +38,9 @@ function generate_buildings(){
     }
 }
 
-async function generate_logged_user_functionalities() {
+async function generate_index_logged_user_functionalities() {
     let logged_user = await get_logged_user();
-    console.log(logged_user);
-    if(logged_user==false) return;
-    console.log(logged_user);
-    document.getElementById("add_location").hidden = false;
+    toggle_if_exists("add_location", logged_user);
 }
 
 generate_buildings();
-generate_logged_user_functionalities();
