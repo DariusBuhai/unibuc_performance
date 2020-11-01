@@ -167,20 +167,16 @@ class Dataset {
         return retVal;
     }
 
-    async getEventsList() {
+    async getEventsList(idBuilding) {
         let db = await MongoClient.connect(url);
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection('Events');
-<<<<<<< HEAD
-        return await collection.find().toArray();
-=======
         let items = await collection.find().toArray();
-        retVal = items.filter((h) => {
-                return h.time() == eventValue;
+        retVal = items.filter((ev) => {
+                return ev.idBuilding() == idBuilding;
         });
               
         return retVal;
->>>>>>> main
     }
 
     async updateEvents(newEvent) {
