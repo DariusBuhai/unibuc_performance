@@ -37,7 +37,10 @@ app.get("/register", (req, res)=>{
 
 /** building api **/
 app.get("/api/buildings", async (req, res)=>{
-  res.status(200).send(await dataset.prototype.getBuildings());
+  res.send(await dataset.prototype.getBuildings());
+});
+app.get("/api/building/:id", async (req, res)=>{
+  res.send(await dataset.prototype.getBuilding(req.params.id));
 });
 
 /** register stuff */
