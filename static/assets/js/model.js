@@ -71,7 +71,7 @@ function toggleButton(id) {
   }
 }
 
-function addSphere(ball) {        
+function addSphere(ball, insertBall = false) {        
   var material = new THREE.MeshBasicMaterial({ color: getColorFromPercentage(
     parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)) });
   var geom = new THREE.SphereGeometry(10, 10);
@@ -86,10 +86,12 @@ function addSphere(ball) {
   }
   viewer.overlays.addMesh(sphereMesh, 'scene1');
 
-  http_post_async('/api/balls', {
-    ball: ball,
-    user_id: user_id,
-  });
+  if (insertBall) {
+    http_post_async('/api/balls', {
+        ball: ball,
+        user_id: user_id,
+    });
+  }
 }
 
 async function loadBalls() {
@@ -196,7 +198,7 @@ function addSphereOnClick(event) {
     }
 
     if (ball.name && ball.maxCapacity) {
-      addSphere(ball);
+      addSphere(ball, true);
     }
   }
 }

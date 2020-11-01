@@ -91,7 +91,6 @@ class Dataset {
         await collection.updateOne({ id: newBuilding.id }, newBuilding);
     }
 
-
     // crud Balls
     async insertBall(ball) {
         let db = await MongoClient.connect(url);
