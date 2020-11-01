@@ -26,7 +26,7 @@ async function generate_buildings(){
                 "                                </li>");
             view_building = parse_dom(view_building.cloneNode(true), {
                 NAME: category_buildings[i].name,
-                STATUS: category_buildings[i].status,
+                STATUS: 'Occupancy ' + category_buildings[i].status + '%',
                 ID: category_buildings[i].id,
             });
             view_buildings.appendChild(view_building);

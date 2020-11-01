@@ -3,8 +3,8 @@ const db = require('modules/dataset.js');
 
 class Prediction {
 
-    makePrediction(hourValue) {
-        let dataset = db.getEventsList();
+    async makePrediction(hourValue) {
+        let dataset = await db.getEventsList();
         let points = [];
 
         for(let i = 0; i < dataset.length(); ++i) {
