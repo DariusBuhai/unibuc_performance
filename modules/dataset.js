@@ -126,7 +126,7 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Events');
-        let rawData = await collection.find({idBuilding: idBuilding}).toArray();
+        let rawData = await collection.find({idBuilding: parseInt(idBuilding)}).toArray();
         
         let points = [];
         let date = new Date();
@@ -136,16 +136,22 @@ class Dataset {
                 points.push([i, rawData[i].peopleAmount]);
 
         let f = ip(points);
-        return JSON.stringify(f(date.getHours()));
+        let ans = f(date.getHours());
+        if (ans < 0) ans = 0;
+        else if (ans > 200) ans %= 200;
+        return JSON.stringify(ans);
     }
 
     // crud Events
 
-    async insertEvents(event) {
+    async insertEvent(event) {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Events');
-        await collection.insert(event);
+        await collection.updateOne({
+            idBuilding: event.idBuilding,
+            time: event.time,
+        }, {$set: event}, {upsert: true});
     }
 
     async getEvents(eventId) {
@@ -171,7 +177,7 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Events');
-        let items = await collection.find({idBuilding: idBuilding}).toArray();
+        let items = await collection.find({idBuilding: parseInt(idBuilding)}).toArray();
 
         for (let x of items)
             retVal[x.time] += x.peopleAmount;
