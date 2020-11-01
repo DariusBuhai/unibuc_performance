@@ -15,7 +15,7 @@ function generate_dom(str, inner = false){
 
 function get_form_data(form_id){
     let form_data = {};
-    let form = document.getElementById("register");
+    let form = document.getElementById(form_id);
     let inputs = form.getElementsByTagName("input");
     for(var id=0;id<inputs.length;id++)
         form_data[inputs[id].name] = inputs[id].value;
@@ -77,7 +77,7 @@ function http_post(theUrl, data, callback, isFormData = false) {
 
 async function http_post_async(theUrl, data, callback, isFormData = false){
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", theUrl, true);
+    xmlHttp.open("POST", theUrl, false);
     if(isFormData){
         var formData = new FormData();
         for(const [key, value] of Object.entries(data))
@@ -87,7 +87,6 @@ async function http_post_async(theUrl, data, callback, isFormData = false){
         xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlHttp.send(JSON.stringify(data));
     }
-
     if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
         return xmlHttp.responseText;
     return false;
