@@ -59,9 +59,8 @@ async function http_get_async(theUrl, json_data = true){
 function http_post(theUrl, data, callback, isFormData = false) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
-            callback(xmlHttp.responseText);
-        }
+        if (xmlHttp.readyState === 4)
+            callback(xmlHttp);
     };
     xmlHttp.open("POST", theUrl);
     if(isFormData){
@@ -87,8 +86,8 @@ async function http_post_async(theUrl, data, callback, isFormData = false){
         xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlHttp.send(JSON.stringify(data));
     }
-    if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-        return xmlHttp.responseText;
+    if (xmlHttp.readyState === 4)
+        return xmlHttp;
     return false;
 }
 
@@ -149,4 +148,16 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function toggle_if_exists(id, visibility){
+    let item = document.getElementById(id);
+    if(item)
+        item.hidden = visibility;
+}
+
+function append_if_exists(id, html){
+    let item = document.getElementById(id);
+    if(item)
+        item.innerHTML = html;
 }

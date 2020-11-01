@@ -23,9 +23,21 @@ app.listen(port, () => {
   console.log('Server started on: ' + port);
 });
 
+/** simplify paths **/
+app.get("/model", (req, res)=>{
+  res.sendFile(__dirname+"/static/model.html");
+});
+app.get("/login", (req, res)=>{
+  res.sendFile(__dirname+"/static/login.html");
+});
+app.get("/register", (req, res)=>{
+  res.sendFile(__dirname+"/static/register.html");
+});
+
+
 /** building api **/
-app.get("/api/buildings", (req, res)=>{
-  res.status(200).send(dataset.prototype.getBuildings());
+app.get("/api/buildings", async (req, res)=>{
+  res.status(200).send(await dataset.prototype.getBuildings());
 });
 
 /** register stuff */
