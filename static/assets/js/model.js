@@ -99,6 +99,7 @@ async function loadBalls() {
   let balls = await http_get_async(`/api/balls/${buildingId}`, true);
   console.log('in load')
   for (ball of balls) {
+    if (!ball.show) continue;
     addSphere(ball);
   }
 
@@ -116,6 +117,12 @@ async function updateBalls() {
   let balls = await http_get_async(`/api/balls/${buildingId}`, true);
   for (ball of balls) {
     // TODO update spheres color
+    if (!ball) continue;
+    if (!ball.show) {
+        viewer.overlays.remove(spheres[parseInt(ball.id)]);
+        spheres[parseInt(ball.id)] = null;
+        continue;
+    }
     spheres[parseInt(ball.id)].material.color.setHex(getColorFromPercentage(
       parseFloat(ball.capacity) / parseFloat(ball.maxCapacity)
     ));
@@ -194,6 +201,7 @@ function addSphereOnClick(event) {
       name: name,
       maxCapacity: capacity,
       capacity: 0,
+      show: true,
     }
 
     if (ball.name && ball.maxCapacity) {

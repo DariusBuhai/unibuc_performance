@@ -100,6 +100,14 @@ app.post('/api/balls', async (req, res) => {
   res.status(200).send(await dataset.prototype.insertBall(req.body.ball));
 });
 
+app.delete('/api/balls', async (req, res) => {
+  if (!req.body.user_id) {
+    res.status(404).send();
+  }
+
+  res.status(200).send(await dataset.prototype.insertBall(req.body.ball));
+});
+
 /** chart */
 app.get('/api/chart/:id', async(req, res) => {
   res.send(await dataset.prototype.getEventByHour(req.params.id));
