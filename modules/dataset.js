@@ -18,6 +18,7 @@ const bcrypt = require('bcrypt');
 
 // Balls:
 // idBall
+// name
 // idBuilding
 // xCoord
 // yCoord
