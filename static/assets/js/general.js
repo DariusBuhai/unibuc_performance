@@ -1,5 +1,6 @@
 
 function parse_dom(dom, key_rep){
+    console.log(dom);
     for(const [key, value] of Object.entries(key_rep))
         dom.innerHTML = dom.innerHTML.replace("["+key+"]", value);
     return dom;
@@ -160,4 +161,8 @@ function append_if_exists(id, html){
     let item = document.getElementById(id);
     if(item)
         item.innerHTML = html;
+}
+
+function set_value_by_id(id, value){
+    document.getElementById(id).innerText = value;
 }
