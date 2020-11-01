@@ -96,7 +96,7 @@ class Dataset {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = dbo.collection('Balls');
-        await collection.insert(ball);
+        await collection.insertOne(ball);
     }
 
     async getBall(id, buildingId) {

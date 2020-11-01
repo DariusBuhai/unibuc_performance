@@ -80,6 +80,11 @@ function addSphere(ball) {
     viewer.overlays.addScene('scene1');
   }
   viewer.overlays.addMesh(sphereMesh, 'scene1');
+
+  http_post_async('/api/balls', {
+    ball: ball,
+    user_id: user_id,
+  });
 }
 
 async function loadBalls() {
@@ -176,7 +181,7 @@ function addSphereOnClick(event) {
 
     ball = {
       id: Object.keys(spheres).length + 1,
-      buildingId: buildingId,
+      buildingId: parseInt(buildingId),
       x: coord.x,
       y: coord.y,
       z: coord.z,
@@ -197,9 +202,10 @@ async function initiate_model(){
 
     load_model();
     generate_hour_chart();
-    if(user_is_logged)
-        viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
-    document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    if(user_is_logged) {
+      viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+      document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
+    }
 }
 
 initiate_model();
