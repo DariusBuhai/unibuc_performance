@@ -8,32 +8,51 @@ var options = {
 let spheres = [];
 
 function load_model(){
-    Autodesk.Viewing.Initializer(options, function () {
-        viewer.start(options.document, options);
-    });
+  Autodesk.Viewing.Initializer(options, function () {
+      viewer.start(options.document, options);
+  });
 }
 
-function addSphere(coord) {        
-  //create material red
-  var material_red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+function addNewButton() {
+  let button = new Autodesk.Viewing.UI.Button('hotspot-tool');
 
-  // //get bounding box of the model
-  //
-  // var boundingBox = viewer.model.getBoundingBox();
-  //
-  // var maxpt = boundingBox.max;
-  // var minpt = boundingBox.min;
-  //
-  // var xdiff = maxpt.x - minpt.x;
-  // var ydiff = maxpt.y - minpt.y;
-  // var zdiff = maxpt.z - minpt.z;
-  //
-  // //set a nice radius in the model size
-  //
-  // var niceRadius = Math.pow((xdiff * xdiff + ydiff * ydiff + zdiff * zdiff), 0.5) / 10;
-  //
-  // //createsphere1 and place it at max point of boundingBox
+  button.addClass('fas')
+  button.addClass('fa-mouse-pointer');
+  button.setToolTip('Toggle hotspot tool');
 
+  // SubToolbar
+  let subToolbar = new Autodesk.Viewing.UI.ControlGroup('my-custom-view-toolbar');
+  subToolbar.addControl(button);
+  viewer.toolbar.addControl(subToolbar);
+
+  setTimeout(() => {
+    let button = document.getElementById('hotspot-tool');
+    button.addEventListener('click', (event) => {
+      toggleButton('hotspot-tool');
+      event.stopPropagation();
+    });
+  }, 2000);
+}
+
+function isButtonActive(id) {
+  let button = document.getElementById(id);
+  return button.classList.contains('active');
+}
+
+function toggleButton(id) {
+  let button = document.getElementById(id);
+  if (button.classList.contains('inactive')) {
+    button.classList.remove('inactive');
+    button.classList.add('active');
+  }
+  else if (button.classList.contains('active')) {
+    button.classList.remove('active');
+    button.classList.add('inactive');
+  }
+}
+
+function addSphere(coord, color = 0xff0000) {        
+  var material_red = new THREE.MeshBasicMaterial({ color: color });
   var geom = new THREE.SphereGeometry(20, 20);
   var sphereMesh = new THREE.Mesh(geom, material_red);
 
@@ -46,15 +65,6 @@ function addSphere(coord) {
   viewer.overlays.addMesh(sphereMesh, 'scene1');
 }
 
-var onKeyDown = function(event) {
-  if (event.keyCode == 67) { // when 'c' is pressed
-    for (sph of spheres) {
-      sph.material.color.setHex(0x00ff00); // there is also setHSV and setRGB
-    }
-    viewer.refresh();
-  }
-};
-document.addEventListener('keydown', onKeyDown, false);
 
 function generate_hour_chart(){
     let date = new Date();
@@ -115,20 +125,13 @@ function getClickCoordinates(event) {
 
 function addSphereOnClick(event) {
   coord = getClickCoordinates(event);
-  console.log(coord);
-  if (coord) {
+  if (isButtonActive('hotspot-tool') && coord) {
     addSphere(coord);
   }
 }
 
-
-viewer.addEventListener(Autodesk.Viewing.SELECTION_CHANGED_EVENT, (event) => {
-  addSphere();
-  console.log('ceva');
-  console.log(event);
-});
-
-document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
-
 load_model();
 generate_hour_chart();
+
+viewer.addEventListener(Autodesk.Viewing.TOOLBAR_CREATED_EVENT, addNewButton);
+document.getElementById('MyViewerDiv').addEventListener('click', addSphereOnClick);
