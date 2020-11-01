@@ -11,7 +11,7 @@ class Prediction {
             points.push([i, dataset[i].peopleAmount]);
         }
 
-        f = ip(points);
+        let f = ip(points);
 
         let date = new Date();
         return f(date.getHours());

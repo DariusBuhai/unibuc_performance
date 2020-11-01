@@ -168,18 +168,11 @@ class Dataset {
         return retVal;
     }
 
-    async getEventsList(eventValue) {
-        let retVal = [];
-
+    async getEventsList() {
         let db = await MongoClient.connect(url);
         let dbo = db.db("smarthack");
         let collection = await dbo.collection('Events');
-        let items = await collection.find().toArray();
-        retVal = items.filter((h) => {
-                return h.date.time() == eventValue;
-        });
-              
-        return retVal;
+        return await collection.find().toArray();
     }
 
     async updateEvents(newEvent) {
