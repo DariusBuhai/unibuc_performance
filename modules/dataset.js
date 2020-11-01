@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 // adminId #
 // name
 // address
+// category
 // hotspotNo
 // maxCap
 // modelLink
@@ -30,14 +31,10 @@ const bcrypt = require('bcrypt');
 class Dataset {
 
     async insertBuilding(building) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Buildings', async function (err, collection) {
-                await collection.insert(building);
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Buildings');
+        await collection.insert(building);
     }
 
     async getBuilding(buildingId) {
@@ -61,46 +58,32 @@ class Dataset {
     }
 
     async updateBuilding(newBuilding) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-            var dbo = db.db("smarthack");
-            await dbo.collection('Buildings', async function (err, collection) {
-                await collection.updateOne({ id: newBuilding.id }, newBuilding, function(err, res) {
-                    if (err) throw err;
-                });
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Buildings');
+        await collection.updateOne({ id: newBuilding.id }, newBuilding);
     }
 
     async insertHours(hour) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.insert(hour);
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Hours');
+        await collection.insert(hour);
     }
 
     async getHours(hourId) {
         let retVal = null;
 
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.find().toArray(function (err, items) {
-                    if (err) throw err;
-
-                    for (let i = 0; i < items.length(); ++i)
-                        if (items[i].id == hourId) {
-                            retVal = items[i];
-                            break;
-                        }
-                });
-            });
-        });
+        let db = MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Hours');
+        let items = await collection.find().toArray();
+                
+        for (let i = 0; i < items.length(); ++i)
+            if (items[i].id == hourId) {
+                retVal = items[i];
+                break;
+            }
 
         return retVal;
     }
@@ -108,35 +91,22 @@ class Dataset {
     async getHoursList(hourValue) {
         let retVal = null;
 
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.find().toArray(async function (err, items) {
-                    if (err) throw err;
-
-                    retVal = items.filter((h) => {
-                        return h.date.getHours() == hourValue;
-                    });
-                });
-            });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Hours');
+        let items = await collection.find().toArray();
+        retVal = items.filter((h) => {
+                return h.date.getHours() == hourValue;
         });
-
+              
         return retVal;
     }
 
     async updateHours(newHour) {
-        await MongoClient.connect(url, async function (err, db) {
-            if (err) throw err;
-
-            var dbo = db.db("smarthack");
-            await dbo.collection('Hours', async function (err, collection) {
-                await collection.updateOne({ id: newHours.id }, newHour, async function (err, res) {
-                    if (err) throw err;
-                });
-            });
-        });
+        let db = await MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Hours');
+        await collection.updateOne({ id: newHours.id }, newHour);
     }
 
     async getLicense(license) {
