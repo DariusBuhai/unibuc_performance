@@ -19,11 +19,620 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbc0bad3-b0aa-4e26-b7bf-7d486a8bb0ef" name="Default Changelist" comment="cladire noua">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_31_2020_9_07_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_31_2020_9_07_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_31_2020_9_07_PM__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cbc0bad3-b0aa-4e26-b7bf-7d486a8bb0ef" name="Default Changelist" comment="cladiri noi">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_1_2020_4_06_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_1_2020_4_06_AM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/0.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/1.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/2.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/CameraDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/CameraList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/FragmentList.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/GeometryMetadata.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/InstanceTree.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/LightDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/LightList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/Materials.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/Set.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/_3D_.svf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/_3D_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/_3D_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/____/_3D_ 96277/_3D_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/model.sdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_attrs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_avs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_ids.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_rcv_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_rcvs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_vals.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/Resource/objects_viewables.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/preview1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/preview2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Building-F5~F6/preview4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/0.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/0.svf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/0.svf.png01_thumb_100x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/0.svf.png01_thumb_200x200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/0.svf.png01_thumb_400x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/CameraDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/CameraList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/FragmentList.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/GeometryMetadata.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/InstanceTree.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/LightDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/LightList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/Materials.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/Set.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/image0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_attrs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_avs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_ids.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_rcv_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_rcvs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_vals.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/objects_viewables.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Condos/cc051d36-a0ca-dc86-a20d-6244e66ab539/section_properties.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/241bd7c6-d2dd-629f-a70d-7e6bc92ddbd8_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/241bd7c6-d2dd-629f-a70d-7e6bc92ddbd8_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/241bd7c6-d2dd-629f-a70d-7e6bc92ddbd8_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/241bd7c6-d2dd-629f-a70d-7e6bc92ddbd8_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/25b2c27b-122b-36df-c112-b0ccffc7ee43_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/25b2c27b-122b-36df-c112-b0ccffc7ee43_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/25b2c27b-122b-36df-c112-b0ccffc7ee43_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/25b2c27b-122b-36df-c112-b0ccffc7ee43_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/2ab65a51-e100-24fa-d26b-0ed8c885e266_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/2ab65a51-e100-24fa-d26b-0ed8c885e266_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/2ab65a51-e100-24fa-d26b-0ed8c885e266_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/2ab65a51-e100-24fa-d26b-0ed8c885e266_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3341ee31-c05b-29f1-2de3-1a5321e0dc65_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3341ee31-c05b-29f1-2de3-1a5321e0dc65_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3341ee31-c05b-29f1-2de3-1a5321e0dc65_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3341ee31-c05b-29f1-2de3-1a5321e0dc65_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3d8fc8e2-149c-1298-8797-74a2ac1cae04_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3d8fc8e2-149c-1298-8797-74a2ac1cae04_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3d8fc8e2-149c-1298-8797-74a2ac1cae04_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/3d8fc8e2-149c-1298-8797-74a2ac1cae04_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/58bea131-5878-68f0-6579-e276f718c2c1_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/58bea131-5878-68f0-6579-e276f718c2c1_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/58bea131-5878-68f0-6579-e276f718c2c1_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/58bea131-5878-68f0-6579-e276f718c2c1_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/75978b23-00f3-1f4b-59bc-dbde144c4ff0_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/75978b23-00f3-1f4b-59bc-dbde144c4ff0_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/75978b23-00f3-1f4b-59bc-dbde144c4ff0_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/75978b23-00f3-1f4b-59bc-dbde144c4ff0_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/0.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/1.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/1/mats/sitework.planting.grass.bermuda.bump1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/1/mats/sitework.planting.grass.bermuda.bump2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/1/mats/sitework.planting.grass.bermuda1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/1/mats/sitework.planting.grass.bermuda2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/10.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/11.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/12.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/13.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/2.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.carpet.5.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.carpet.5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.tile.diamond.red.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.tile.diamond.red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.tile.square.medium blue.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.flooring.tile.square.medium blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.masonry flooring.granite.grey speckled.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/finishes.masonry flooring.granite.grey speckled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.leather.black.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.leather.black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.linen.beige.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.linen.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.stripes.1.bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/furnishings.fabrics.stripes.1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/maple_natural.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/metals.ornamental metals.aluminum.brushed.random.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/metals.ornamental metals.plate.mesh.cutout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/plastic_smooth_bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/sitework.planting.grass.bermuda.bump1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/sitework.planting.grass.bermuda.bump2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/sitework.planting.grass.bermuda1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/sitework.planting.grass.bermuda2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/thermal_moisture.roofing_siding panels.wood.horizontal.beige.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/woods &amp; plastics.finish carpentry.wood.cherry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/woods &amp; plastics.finish carpentry.wood.red birch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/3/mats/woods &amp; plastics.finish carpentry.wood.teak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/4.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/5.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/6.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/7.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/8.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/9.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/CameraDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/CameraList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/FragmentList.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/GeometryMetadata.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/InstanceTree.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/LightDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/LightList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/Materials.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/ProteinMaterials.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/Set.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/concrete/external.dependency/simple_concrete_mtl_broomcurved_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/concrete/external.dependency/simple_concrete_mtl_broomstraight_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/metal/external.dependency/simple_metal_mtl_break_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/metal/external.dependency/simple_metal_mtl_brush_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/metal/external.dependency/simple_metal_mtl_checkerplate_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/metal/external.dependency/simple_metal_mtl_diamondplate_pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/stone/external.dependency/simple_stone_mtl_granite_bump.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/stone/external.dependency/simple_stone_mtl_marble_bump.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/mats/stone/external.dependency/simple_stone_mtl_stonewall_bump.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/{3D}.svf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/{3D}1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/{3D}2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/3D View/{3D} 713157/{3D}4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-1 - Basement &amp; Ground Floor 182046/dwfx/A-1 - Basement &amp; Ground Floor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-1 - Basement &amp; Ground Floor 182046/dwfx/A-1 - Basement &amp; Ground Floor2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-1 - Basement &amp; Ground Floor 182046/dwfx/A-1 - Basement &amp; Ground Floor4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-2 - 1st &amp; 2nd Floor 182057/dwfx/A-2 - 1st &amp; 2nd Floor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-2 - 1st &amp; 2nd Floor 182057/dwfx/A-2 - 1st &amp; 2nd Floor2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-2 - 1st &amp; 2nd Floor 182057/dwfx/A-2 - 1st &amp; 2nd Floor4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-3 - Terrace &amp; Roof 182066/dwfx/A-3 - Terrace &amp; Roof1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-3 - Terrace &amp; Roof 182066/dwfx/A-3 - Terrace &amp; Roof2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/A-3 - Terrace &amp; Roof 182066/dwfx/A-3 - Terrace &amp; Roof4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/E-1 - Panel Schedules 493993/dwfx/E-1 - Panel Schedules1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/E-1 - Panel Schedules 493993/dwfx/E-1 - Panel Schedules2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/E-1 - Panel Schedules 493993/dwfx/E-1 - Panel Schedules4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-0 - Cover Page 386420/dwfx/M-0 - Cover Page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-0 - Cover Page 386420/dwfx/M-0 - Cover Page2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-0 - Cover Page 386420/dwfx/M-0 - Cover Page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-1 - Basement &amp; Ground Floor HVAC 182080/dwfx/M-1 - Basement &amp; Ground Floor HVAC1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-1 - Basement &amp; Ground Floor HVAC 182080/dwfx/M-1 - Basement &amp; Ground Floor HVAC2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-1 - Basement &amp; Ground Floor HVAC 182080/dwfx/M-1 - Basement &amp; Ground Floor HVAC4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-2 - 1st &amp; 2nd Floor HVAC 182094/dwfx/M-2 - 1st &amp; 2nd Floor HVAC1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-2 - 1st &amp; 2nd Floor HVAC 182094/dwfx/M-2 - 1st &amp; 2nd Floor HVAC2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-2 - 1st &amp; 2nd Floor HVAC 182094/dwfx/M-2 - 1st &amp; 2nd Floor HVAC4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-3 - HVAC Details 183007/dwfx/M-3 - HVAC Details1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-3 - HVAC Details 183007/dwfx/M-3 - HVAC Details2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/M-3 - HVAC Details 183007/dwfx/M-3 - HVAC Details4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-0 - Cover Page 387181/dwfx/P-0 - Cover Page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-0 - Cover Page 387181/dwfx/P-0 - Cover Page2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-0 - Cover Page 387181/dwfx/P-0 - Cover Page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-1 - Basement &amp; Ground Floor 386441/dwfx/P-1 - Basement &amp; Ground Floor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-1 - Basement &amp; Ground Floor 386441/dwfx/P-1 - Basement &amp; Ground Floor2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-1 - Basement &amp; Ground Floor 386441/dwfx/P-1 - Basement &amp; Ground Floor4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-2 - 1st Floor &amp; 2nd Floor 386453/dwfx/P-2 - 1st Floor &amp; 2nd Floor1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-2 - 1st Floor &amp; 2nd Floor 386453/dwfx/P-2 - 1st Floor &amp; 2nd Floor2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-2 - 1st Floor &amp; 2nd Floor 386453/dwfx/P-2 - 1st Floor &amp; 2nd Floor4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-3 - Plumbing Details 386747/dwfx/P-3 - Plumbing Details1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-3 - Plumbing Details 386747/dwfx/P-3 - Plumbing Details2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/Sheet/P-3 - Plumbing Details 386747/dwfx/P-3 - Plumbing Details4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/model.sdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_attrs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_avs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_ids.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_rcv_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_rcvs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_vals.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/Resource/objects_viewables.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/a3bb3625-a304-28ca-94ba-99b9691378fc_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/a3bb3625-a304-28ca-94ba-99b9691378fc_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/a3bb3625-a304-28ca-94ba-99b9691378fc_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/a3bb3625-a304-28ca-94ba-99b9691378fc_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/af282c12-7543-f858-565a-e4b92e1d819b_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/af282c12-7543-f858-565a-e4b92e1d819b_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/af282c12-7543-f858-565a-e4b92e1d819b_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/af282c12-7543-f858-565a-e4b92e1d819b_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c215af52-625c-2270-db9d-704f57477f97_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c215af52-625c-2270-db9d-704f57477f97_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c215af52-625c-2270-db9d-704f57477f97_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c215af52-625c-2270-db9d-704f57477f97_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c23565cc-19a4-493c-462e-443c0006c90b_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c23565cc-19a4-493c-462e-443c0006c90b_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c23565cc-19a4-493c-462e-443c0006c90b_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/c23565cc-19a4-493c-462e-443c0006c90b_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/f8264a89-2f84-4c5b-e1b4-06f6438ae3b1_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/f8264a89-2f84-4c5b-e1b4-06f6438ae3b1_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/f8264a89-2f84-4c5b-e1b4-06f6438ae3b1_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/f8264a89-2f84-4c5b-e1b4-06f6438ae3b1_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/preview1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/preview2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Office/preview4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/03536597-6f19-e057-0d8d-47262a40e070_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/03536597-6f19-e057-0d8d-47262a40e070_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/03536597-6f19-e057-0d8d-47262a40e070_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/03536597-6f19-e057-0d8d-47262a40e070_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/03536597-6f19-e057-0d8d-47262a40e070_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0b4d2e81-fbba-ad98-e43a-c79947eabfd8_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0d419a02-2482-089f-d793-09998cd035be_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0d419a02-2482-089f-d793-09998cd035be_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0d419a02-2482-089f-d793-09998cd035be_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0d419a02-2482-089f-d793-09998cd035be_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0d419a02-2482-089f-d793-09998cd035be_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0dee931c-4152-dfcb-47cd-04815c0dc172_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0dee931c-4152-dfcb-47cd-04815c0dc172_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0dee931c-4152-dfcb-47cd-04815c0dc172_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0dee931c-4152-dfcb-47cd-04815c0dc172_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0dee931c-4152-dfcb-47cd-04815c0dc172_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0ec154ea-0efd-cb0d-72a7-e824e1673a14_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0ec154ea-0efd-cb0d-72a7-e824e1673a14_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0ec154ea-0efd-cb0d-72a7-e824e1673a14_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0ec154ea-0efd-cb0d-72a7-e824e1673a14_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/0ec154ea-0efd-cb0d-72a7-e824e1673a14_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/19e5572c-9761-7a80-bcce-5bd664c96864_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/19e5572c-9761-7a80-bcce-5bd664c96864_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/19e5572c-9761-7a80-bcce-5bd664c96864_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/19e5572c-9761-7a80-bcce-5bd664c96864_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/19e5572c-9761-7a80-bcce-5bd664c96864_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1e448262-1d01-eeb3-a648-6646872313fa_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1e448262-1d01-eeb3-a648-6646872313fa_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1e448262-1d01-eeb3-a648-6646872313fa_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1e448262-1d01-eeb3-a648-6646872313fa_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1e448262-1d01-eeb3-a648-6646872313fa_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1f297ebb-c783-f642-b0f6-9eb25f167d84_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1f297ebb-c783-f642-b0f6-9eb25f167d84_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1f297ebb-c783-f642-b0f6-9eb25f167d84_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1f297ebb-c783-f642-b0f6-9eb25f167d84_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/1f297ebb-c783-f642-b0f6-9eb25f167d84_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/2844e99c-f7d7-a49e-8fe6-95a07b0ad101_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/2844e99c-f7d7-a49e-8fe6-95a07b0ad101_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/2844e99c-f7d7-a49e-8fe6-95a07b0ad101_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/2844e99c-f7d7-a49e-8fe6-95a07b0ad101_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/2844e99c-f7d7-a49e-8fe6-95a07b0ad101_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/33a789a4-b8bb-b6c9-790a-17abb42b98bb_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/33a789a4-b8bb-b6c9-790a-17abb42b98bb_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/33a789a4-b8bb-b6c9-790a-17abb42b98bb_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/33a789a4-b8bb-b6c9-790a-17abb42b98bb_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/33a789a4-b8bb-b6c9-790a-17abb42b98bb_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/34be2cc9-38fa-d232-45a1-e09c0d82cfaf_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/34be2cc9-38fa-d232-45a1-e09c0d82cfaf_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/34be2cc9-38fa-d232-45a1-e09c0d82cfaf_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/34be2cc9-38fa-d232-45a1-e09c0d82cfaf_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/34be2cc9-38fa-d232-45a1-e09c0d82cfaf_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/364031b1-cd1f-c953-7f7b-f7a26d0e6c15_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/364031b1-cd1f-c953-7f7b-f7a26d0e6c15_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/364031b1-cd1f-c953-7f7b-f7a26d0e6c15_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/364031b1-cd1f-c953-7f7b-f7a26d0e6c15_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/364031b1-cd1f-c953-7f7b-f7a26d0e6c15_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/37963d2a-2f38-0ce0-f0de-0ac3f9127338_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/37963d2a-2f38-0ce0-f0de-0ac3f9127338_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/37963d2a-2f38-0ce0-f0de-0ac3f9127338_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/37963d2a-2f38-0ce0-f0de-0ac3f9127338_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/37963d2a-2f38-0ce0-f0de-0ac3f9127338_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/3ecdb9de-4755-0c03-fb52-a7399e798b6d_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/3ecdb9de-4755-0c03-fb52-a7399e798b6d_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/3ecdb9de-4755-0c03-fb52-a7399e798b6d_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/3ecdb9de-4755-0c03-fb52-a7399e798b6d_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/3ecdb9de-4755-0c03-fb52-a7399e798b6d_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/479d802c-5cdb-bd1a-b1f0-d06b2dd32f39_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/479d802c-5cdb-bd1a-b1f0-d06b2dd32f39_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/479d802c-5cdb-bd1a-b1f0-d06b2dd32f39_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/479d802c-5cdb-bd1a-b1f0-d06b2dd32f39_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/479d802c-5cdb-bd1a-b1f0-d06b2dd32f39_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5c32cd73-02d7-a59f-c0a0-d41d413c6740_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5f6a7619-27f1-7f0b-48df-4865baf2705b_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5f6a7619-27f1-7f0b-48df-4865baf2705b_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5f6a7619-27f1-7f0b-48df-4865baf2705b_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5f6a7619-27f1-7f0b-48df-4865baf2705b_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/5f6a7619-27f1-7f0b-48df-4865baf2705b_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6048cdf0-21f7-4513-957b-168bc5652fd0_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6048cdf0-21f7-4513-957b-168bc5652fd0_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6048cdf0-21f7-4513-957b-168bc5652fd0_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6048cdf0-21f7-4513-957b-168bc5652fd0_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6048cdf0-21f7-4513-957b-168bc5652fd0_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/60ad70dd-9f7e-49e0-69e1-2f743901e343_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/60ad70dd-9f7e-49e0-69e1-2f743901e343_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/60ad70dd-9f7e-49e0-69e1-2f743901e343_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/60ad70dd-9f7e-49e0-69e1-2f743901e343_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/60ad70dd-9f7e-49e0-69e1-2f743901e343_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/64466950-5798-fe26-66df-24f1712ffb6a_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/64466950-5798-fe26-66df-24f1712ffb6a_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/64466950-5798-fe26-66df-24f1712ffb6a_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/64466950-5798-fe26-66df-24f1712ffb6a_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/64466950-5798-fe26-66df-24f1712ffb6a_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/66e3f13f-2878-fe9d-f279-58bca98c808f_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/66e3f13f-2878-fe9d-f279-58bca98c808f_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/66e3f13f-2878-fe9d-f279-58bca98c808f_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/66e3f13f-2878-fe9d-f279-58bca98c808f_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/66e3f13f-2878-fe9d-f279-58bca98c808f_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6afac90b-2990-e8ef-028e-63533bb050b3_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6afac90b-2990-e8ef-028e-63533bb050b3_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6afac90b-2990-e8ef-028e-63533bb050b3_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6afac90b-2990-e8ef-028e-63533bb050b3_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6afac90b-2990-e8ef-028e-63533bb050b3_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6d956530-c4e1-a0d1-7334-99a781bee264_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6d956530-c4e1-a0d1-7334-99a781bee264_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6d956530-c4e1-a0d1-7334-99a781bee264_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6d956530-c4e1-a0d1-7334-99a781bee264_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/6d956530-c4e1-a0d1-7334-99a781bee264_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/737db1bb-853e-cd8f-0a6b-2cb8c253cdde_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/737db1bb-853e-cd8f-0a6b-2cb8c253cdde_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/737db1bb-853e-cd8f-0a6b-2cb8c253cdde_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/737db1bb-853e-cd8f-0a6b-2cb8c253cdde_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/737db1bb-853e-cd8f-0a6b-2cb8c253cdde_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/7699c126-9ba7-b6bf-ab56-3af9ae9ba640_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/7699c126-9ba7-b6bf-ab56-3af9ae9ba640_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/7699c126-9ba7-b6bf-ab56-3af9ae9ba640_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/7699c126-9ba7-b6bf-ab56-3af9ae9ba640_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/7699c126-9ba7-b6bf-ab56-3af9ae9ba640_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/864fd0c5-995e-a70a-05ba-db6018eae7f4_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/864fd0c5-995e-a70a-05ba-db6018eae7f4_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/864fd0c5-995e-a70a-05ba-db6018eae7f4_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/864fd0c5-995e-a70a-05ba-db6018eae7f4_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/864fd0c5-995e-a70a-05ba-db6018eae7f4_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8902aedf-21d0-ded0-dd1b-1e011446f40e_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8902aedf-21d0-ded0-dd1b-1e011446f40e_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8902aedf-21d0-ded0-dd1b-1e011446f40e_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8902aedf-21d0-ded0-dd1b-1e011446f40e_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8902aedf-21d0-ded0-dd1b-1e011446f40e_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8dfbe685-c08a-1f1b-fdbf-784ee261ce34_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8dfbe685-c08a-1f1b-fdbf-784ee261ce34_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8dfbe685-c08a-1f1b-fdbf-784ee261ce34_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8dfbe685-c08a-1f1b-fdbf-784ee261ce34_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/8dfbe685-c08a-1f1b-fdbf-784ee261ce34_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/96f61bc0-05a7-c637-a2bc-3ec8f5e8f4da_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/96f61bc0-05a7-c637-a2bc-3ec8f5e8f4da_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/96f61bc0-05a7-c637-a2bc-3ec8f5e8f4da_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/96f61bc0-05a7-c637-a2bc-3ec8f5e8f4da_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/96f61bc0-05a7-c637-a2bc-3ec8f5e8f4da_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/991a9dd2-08f5-015c-c062-7092b30797cc_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/991a9dd2-08f5-015c-c062-7092b30797cc_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/991a9dd2-08f5-015c-c062-7092b30797cc_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/991a9dd2-08f5-015c-c062-7092b30797cc_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/991a9dd2-08f5-015c-c062-7092b30797cc_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/0.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/1.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/10.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/11.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/12.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/13.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/14.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/15.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/16.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/17.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/18.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/19.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/2.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/20.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/3.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/4.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/5.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/6.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/7.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/8.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/9.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/CameraDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/CameraList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/FragmentList.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/GeometryMetadata.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/InstanceTree.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/LightDefinitions.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/LightList.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/Materials.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/Set.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/_3D_.svf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/_3D_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/_3D_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/3D_View/_3D_ 1481884/_3D_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS 54218/dwfx/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS 54218/dwfx/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS 54218/dwfx/A000___MATERIAL__GRAPHIC_SYMBOLS__ABBREVIATIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A002___PROJECT_STANDARDS__PARTITION_TYPES 54225/dwfx/A002___PROJECT_STANDARDS__PARTITION_TYPES1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A002___PROJECT_STANDARDS__PARTITION_TYPES 54225/dwfx/A002___PROJECT_STANDARDS__PARTITION_TYPES2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A002___PROJECT_STANDARDS__PARTITION_TYPES 54225/dwfx/A002___PROJECT_STANDARDS__PARTITION_TYPES4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A003___CODE_SUMMARY 472193/dwfx/A003___CODE_SUMMARY1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A003___CODE_SUMMARY 472193/dwfx/A003___CODE_SUMMARY2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A003___CODE_SUMMARY 472193/dwfx/A003___CODE_SUMMARY4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A004___CODE_SUMMARY 3261135/dwfx/A004___CODE_SUMMARY1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A004___CODE_SUMMARY 3261135/dwfx/A004___CODE_SUMMARY2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A004___CODE_SUMMARY 3261135/dwfx/A004___CODE_SUMMARY4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A010___DOOR_SCHEDULE 55446/dwfx/A010___DOOR_SCHEDULE1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A010___DOOR_SCHEDULE 55446/dwfx/A010___DOOR_SCHEDULE2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A010___DOOR_SCHEDULE 55446/dwfx/A010___DOOR_SCHEDULE4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A011___DOOR_TYPES_AND_DETAILS 55453/dwfx/A011___DOOR_TYPES_AND_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A011___DOOR_TYPES_AND_DETAILS 55453/dwfx/A011___DOOR_TYPES_AND_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A011___DOOR_TYPES_AND_DETAILS 55453/dwfx/A011___DOOR_TYPES_AND_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A012___DOOR___WINDOW_DETAILS 1448315/dwfx/A012___DOOR___WINDOW_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A012___DOOR___WINDOW_DETAILS 1448315/dwfx/A012___DOOR___WINDOW_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A012___DOOR___WINDOW_DETAILS 1448315/dwfx/A012___DOOR___WINDOW_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A013___DOOR___WINDOW_DETAILS 2721632/dwfx/A013___DOOR___WINDOW_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A013___DOOR___WINDOW_DETAILS 2721632/dwfx/A013___DOOR___WINDOW_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A013___DOOR___WINDOW_DETAILS 2721632/dwfx/A013___DOOR___WINDOW_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100_5___GARAGE_PLAN___ROOF_PLAN 125704/dwfx/A100_5___GARAGE_PLAN___ROOF_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100_5___GARAGE_PLAN___ROOF_PLAN 125704/dwfx/A100_5___GARAGE_PLAN___ROOF_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100_5___GARAGE_PLAN___ROOF_PLAN 125704/dwfx/A100_5___GARAGE_PLAN___ROOF_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100___FIRST_FLOOR_PLAN 55460/dwfx/A100___FIRST_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100___FIRST_FLOOR_PLAN 55460/dwfx/A100___FIRST_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A100___FIRST_FLOOR_PLAN 55460/dwfx/A100___FIRST_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A101___SECOND_FLOOR_PLAN 125718/dwfx/A101___SECOND_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A101___SECOND_FLOOR_PLAN 125718/dwfx/A101___SECOND_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A101___SECOND_FLOOR_PLAN 125718/dwfx/A101___SECOND_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A102___THIRD_FLOOR_PLAN 91117/dwfx/A102___THIRD_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A102___THIRD_FLOOR_PLAN 91117/dwfx/A102___THIRD_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A102___THIRD_FLOOR_PLAN 91117/dwfx/A102___THIRD_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A103___FOURTH_FLOOR_PLAN 91124/dwfx/A103___FOURTH_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A103___FOURTH_FLOOR_PLAN 91124/dwfx/A103___FOURTH_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A103___FOURTH_FLOOR_PLAN 91124/dwfx/A103___FOURTH_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A104___FIFTH_FLOOR_PLAN___PENTHOUSE 91131/dwfx/A104___FIFTH_FLOOR_PLAN___PENTHOUSE1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A104___FIFTH_FLOOR_PLAN___PENTHOUSE 91131/dwfx/A104___FIFTH_FLOOR_PLAN___PENTHOUSE2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A104___FIFTH_FLOOR_PLAN___PENTHOUSE 91131/dwfx/A104___FIFTH_FLOOR_PLAN___PENTHOUSE4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A105___ROOF_PLAN 102696/dwfx/A105___ROOF_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A105___ROOF_PLAN 102696/dwfx/A105___ROOF_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A105___ROOF_PLAN 102696/dwfx/A105___ROOF_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR 55523/dwfx/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR 55523/dwfx/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR 55523/dwfx/A150___REFLECTED_CEILING_PLAN___FIRST_FLOOR4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR 1364906/dwfx/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR 1364906/dwfx/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR 1364906/dwfx/A151___REFLECTED_CEILING_PLAN___SECOND_FLOOR4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR 1247682/dwfx/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR 1247682/dwfx/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR 1247682/dwfx/A152___REFLECTED_CEILING_PLAN___THIRD_FLOOR4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR 1248072/dwfx/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR 1248072/dwfx/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR 1248072/dwfx/A153___REFLECTED_CEILING_PLAN___FOURTH_FLOOR4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE 1248081/dwfx/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE 1248081/dwfx/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE 1248081/dwfx/A154___REFLECTED_CEILING_PLAN___FIFTH_FLOOR_PENTHOUSE4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH 55467/dwfx/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH 55467/dwfx/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH 55467/dwfx/A200___EXTERIOR_ELEVATIONS_NORTH___SOUTH4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A201___EXTERIOR_ELEVATIONS_EAST___WEST 103810/dwfx/A201___EXTERIOR_ELEVATIONS_EAST___WEST1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A201___EXTERIOR_ELEVATIONS_EAST___WEST 103810/dwfx/A201___EXTERIOR_ELEVATIONS_EAST___WEST2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A201___EXTERIOR_ELEVATIONS_EAST___WEST 103810/dwfx/A201___EXTERIOR_ELEVATIONS_EAST___WEST4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS 833767/dwfx/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS 833767/dwfx/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS 833767/dwfx/A202___5TH_FLOOR___PENTHOUSE_ELEVATIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE 125725/dwfx/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE 125725/dwfx/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE 125725/dwfx/A203___EXTERIOR_ELEVATIONS_NORTH___SOUTH___GARAGE4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A300___WALL_SECTIONS 55481/dwfx/A300___WALL_SECTIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A300___WALL_SECTIONS 55481/dwfx/A300___WALL_SECTIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A300___WALL_SECTIONS 55481/dwfx/A300___WALL_SECTIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A301___WALL_SECTIONS 599992/dwfx/A301___WALL_SECTIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A301___WALL_SECTIONS 599992/dwfx/A301___WALL_SECTIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A301___WALL_SECTIONS 599992/dwfx/A301___WALL_SECTIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A302___WALL_SECTIONS 55474/dwfx/A302___WALL_SECTIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A302___WALL_SECTIONS 55474/dwfx/A302___WALL_SECTIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A302___WALL_SECTIONS 55474/dwfx/A302___WALL_SECTIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A320___EXTERIOR_DETAILS 1448934/dwfx/A320___EXTERIOR_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A320___EXTERIOR_DETAILS 1448934/dwfx/A320___EXTERIOR_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A320___EXTERIOR_DETAILS 1448934/dwfx/A320___EXTERIOR_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A321___EXTERIOR_DETAILS 2897569/dwfx/A321___EXTERIOR_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A321___EXTERIOR_DETAILS 2897569/dwfx/A321___EXTERIOR_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A321___EXTERIOR_DETAILS 2897569/dwfx/A321___EXTERIOR_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A322___EXTERIOR_GARAGE_DETAILS 2192048/dwfx/A322___EXTERIOR_GARAGE_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A322___EXTERIOR_GARAGE_DETAILS 2192048/dwfx/A322___EXTERIOR_GARAGE_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A322___EXTERIOR_GARAGE_DETAILS 2192048/dwfx/A322___EXTERIOR_GARAGE_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A400___STAIR_PLANS__DETAILS 55509/dwfx/A400___STAIR_PLANS__DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A400___STAIR_PLANS__DETAILS 55509/dwfx/A400___STAIR_PLANS__DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A400___STAIR_PLANS__DETAILS 55509/dwfx/A400___STAIR_PLANS__DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A401___STAIR_SECTIONS 592384/dwfx/A401___STAIR_SECTIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A401___STAIR_SECTIONS 592384/dwfx/A401___STAIR_SECTIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A401___STAIR_SECTIONS 592384/dwfx/A401___STAIR_SECTIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A402___STAIR_PLANS___ELEVATIONS 591572/dwfx/A402___STAIR_PLANS___ELEVATIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A402___STAIR_PLANS___ELEVATIONS 591572/dwfx/A402___STAIR_PLANS___ELEVATIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A402___STAIR_PLANS___ELEVATIONS 591572/dwfx/A402___STAIR_PLANS___ELEVATIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A403___STAIR_SECTIONS___DETAILS 1023048/dwfx/A403___STAIR_SECTIONS___DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A403___STAIR_SECTIONS___DETAILS 1023048/dwfx/A403___STAIR_SECTIONS___DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A403___STAIR_SECTIONS___DETAILS 1023048/dwfx/A403___STAIR_SECTIONS___DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A404___STAIR_DETAILS 2680007/dwfx/A404___STAIR_DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A404___STAIR_DETAILS 2680007/dwfx/A404___STAIR_DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A404___STAIR_DETAILS 2680007/dwfx/A404___STAIR_DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A410___NORTH_BALCONY_PLANS___ELEVATIONS 1296407/dwfx/A410___NORTH_BALCONY_PLANS___ELEVATIONS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A410___NORTH_BALCONY_PLANS___ELEVATIONS 1296407/dwfx/A410___NORTH_BALCONY_PLANS___ELEVATIONS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A410___NORTH_BALCONY_PLANS___ELEVATIONS 1296407/dwfx/A410___NORTH_BALCONY_PLANS___ELEVATIONS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS 1175556/dwfx/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS 1175556/dwfx/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS 1175556/dwfx/A411___NORTH_BALCONY_PLANS__SECTIONS____DETAILS4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A700___INTERIOR___EXTERIOR_SIGNAGE 1862100/dwfx/A700___INTERIOR___EXTERIOR_SIGNAGE1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A700___INTERIOR___EXTERIOR_SIGNAGE 1862100/dwfx/A700___INTERIOR___EXTERIOR_SIGNAGE2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/A700___INTERIOR___EXTERIOR_SIGNAGE 1862100/dwfx/A700___INTERIOR___EXTERIOR_SIGNAGE4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN 1021205/dwfx/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN 1021205/dwfx/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN 1021205/dwfx/D100___DEMOLITION_PLAN___FIRST_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN 1021274/dwfx/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN 1021274/dwfx/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN 1021274/dwfx/D102___DEMOLITION_PLAN___SECOND_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN 1021291/dwfx/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN 1021291/dwfx/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN 1021291/dwfx/D103___DEMOLITION_PLAN___THIRD_FLOOR_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN 1173752/dwfx/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN 1173752/dwfx/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN 1173752/dwfx/D104___DEMOLITION_PLAN___EXISTING_ROOF_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/ENCROACHMENT_A___KEY_PLAN 2767284/dwfx/ENCROACHMENT_A___KEY_PLAN1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/ENCROACHMENT_A___KEY_PLAN 2767284/dwfx/ENCROACHMENT_A___KEY_PLAN2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/Sheet/ENCROACHMENT_A___KEY_PLAN 2767284/dwfx/ENCROACHMENT_A___KEY_PLAN4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/model.sdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_attrs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_avs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_ids.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_rcv_offs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_rcvs.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_vals.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/Resource/objects_viewables.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a3455611-dc84-f680-c2be-28c5334b216c_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a3455611-dc84-f680-c2be-28c5334b216c_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a3455611-dc84-f680-c2be-28c5334b216c_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a3455611-dc84-f680-c2be-28c5334b216c_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a3455611-dc84-f680-c2be-28c5334b216c_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a8399c49-f7cb-7756-31b5-27bace8d205c_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a8399c49-f7cb-7756-31b5-27bace8d205c_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a8399c49-f7cb-7756-31b5-27bace8d205c_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a8399c49-f7cb-7756-31b5-27bace8d205c_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/a8399c49-f7cb-7756-31b5-27bace8d205c_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/b97b6d62-8093-8074-6ab9-962c17187d1e_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/b97b6d62-8093-8074-6ab9-962c17187d1e_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/b97b6d62-8093-8074-6ab9-962c17187d1e_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/b97b6d62-8093-8074-6ab9-962c17187d1e_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/b97b6d62-8093-8074-6ab9-962c17187d1e_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc58ec58-3a63-1c35-3c52-027fbe92d6c8_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc58ec58-3a63-1c35-3c52-027fbe92d6c8_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc58ec58-3a63-1c35-3c52-027fbe92d6c8_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc58ec58-3a63-1c35-3c52-027fbe92d6c8_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc58ec58-3a63-1c35-3c52-027fbe92d6c8_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc64907d-86a4-26e2-c740-f26555d04443_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc64907d-86a4-26e2-c740-f26555d04443_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc64907d-86a4-26e2-c740-f26555d04443_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc64907d-86a4-26e2-c740-f26555d04443_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/bc64907d-86a4-26e2-c740-f26555d04443_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/c386d0fc-31e0-16bb-b39c-507df07fe31b_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/c386d0fc-31e0-16bb-b39c-507df07fe31b_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/c386d0fc-31e0-16bb-b39c-507df07fe31b_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/c386d0fc-31e0-16bb-b39c-507df07fe31b_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/c386d0fc-31e0-16bb-b39c-507df07fe31b_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cbbde0eb-980b-04cc-7766-5b3baf6fb464_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cbbde0eb-980b-04cc-7766-5b3baf6fb464_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cbbde0eb-980b-04cc-7766-5b3baf6fb464_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cbbde0eb-980b-04cc-7766-5b3baf6fb464_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cbbde0eb-980b-04cc-7766-5b3baf6fb464_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cc8502d7-0000-e955-ed83-a5216c256186_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cc8502d7-0000-e955-ed83-a5216c256186_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cc8502d7-0000-e955-ed83-a5216c256186_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cc8502d7-0000-e955-ed83-a5216c256186_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/cc8502d7-0000-e955-ed83-a5216c256186_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/ccc174f8-705b-a4ee-11bd-7d57afb63cc5_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/ccc174f8-705b-a4ee-11bd-7d57afb63cc5_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/ccc174f8-705b-a4ee-11bd-7d57afb63cc5_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/ccc174f8-705b-a4ee-11bd-7d57afb63cc5_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/ccc174f8-705b-a4ee-11bd-7d57afb63cc5_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/d1d2f83a-8e13-ff94-e2e6-b88bec1922bf_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/d1d2f83a-8e13-ff94-e2e6-b88bec1922bf_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/d1d2f83a-8e13-ff94-e2e6-b88bec1922bf_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/dbd74e36-ffaa-7a30-a833-a33c367e488a_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/dbd74e36-ffaa-7a30-a833-a33c367e488a_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/dbd74e36-ffaa-7a30-a833-a33c367e488a_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/dbd74e36-ffaa-7a30-a833-a33c367e488a_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/dbd74e36-ffaa-7a30-a833-a33c367e488a_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f8830433-36c4-4e5b-7b37-8a2411a13cd3_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f8830433-36c4-4e5b-7b37-8a2411a13cd3_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f8830433-36c4-4e5b-7b37-8a2411a13cd3_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f8830433-36c4-4e5b-7b37-8a2411a13cd3_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f8830433-36c4-4e5b-7b37-8a2411a13cd3_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f89bcfcd-0510-b20e-6f06-4ab507e55e82_f2d/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f89bcfcd-0510-b20e-6f06-4ab507e55e82_f2d/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f89bcfcd-0510-b20e-6f06-4ab507e55e82_f2d/manifest.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f89bcfcd-0510-b20e-6f06-4ab507e55e82_f2d/metadata.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/f89bcfcd-0510-b20e-6f06-4ab507e55e82_f2d/primaryGraphics.f2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/preview1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/preview2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/models/Wyandotte Lofts/preview4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +677,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604145589306</updated>
-      <workItem from="1604145590945" duration="18535000" />
+      <workItem from="1604145590945" duration="19283000" />
     </task>
     <task id="LOCAL-00001" summary="Modificare 3D">
       <created>1604155143635</created>
@@ -98,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604165619462</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cladire noua">
+      <created>1604196518182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604196518182</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +737,8 @@
     <MESSAGE value="test git" />
     <MESSAGE value="functie care face random operatii cu oameni veniti/ plecati" />
     <MESSAGE value="cladire noua" />
-    <option name="LAST_COMMIT_MESSAGE" value="cladire noua" />
+    <MESSAGE value="cladiri noi" />
+    <option name="LAST_COMMIT_MESSAGE" value="cladiri noi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="671" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604162625913">
@@ -144,14 +761,14 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1604155753637" />
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604171248611">
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1604196533360">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1604171248611" />
-    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604196376299">
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1604196533360" />
+    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604197086582">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080@0.0.1858.1080" timestamp="1604196376299" />
+    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080@0.0.1858.1080" timestamp="1604197086582" />
     <state x="616" y="328" key="git4idea.merge.GitPullDialog" timestamp="1604175239424">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
