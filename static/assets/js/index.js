@@ -37,7 +37,8 @@ async function generate_buildings(){
 
 async function generate_index_logged_user_functionalities() {
     let logged_user = await check_logged_user();
-    toggle_if_exists("add_location", logged_user);
+    toggle_if_exists("add_location", !logged_user);
 }
 
 generate_buildings();
+generate_index_logged_user_functionalities();
