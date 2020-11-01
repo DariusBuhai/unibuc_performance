@@ -172,8 +172,8 @@ class Dataset {
         let dbo = await db.db("smarthack");
         let collection = await dbo.collection('Events');
         let items = await collection.find().toArray();
-        retVal = items.filter((ev) => {
-                return ev.idBuilding() == idBuilding;
+        let retVal = items.filter((ev) => {
+                return ev.idBuilding == idBuilding;
         });
               
         return retVal;
