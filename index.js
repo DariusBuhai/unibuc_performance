@@ -23,46 +23,53 @@ app.listen(port, () => {
   console.log('Server started on: ' + port);
 });
 
+/** simplify paths **/
+app.get("/model", (req, res)=>{
+  res.sendFile(__dirname+"/static/model.html");
+});
+app.get("/login", (req, res)=>{
+  res.sendFile(__dirname+"/static/login.html");
+});
+app.get("/register", (req, res)=>{
+  res.sendFile(__dirname+"/static/register.html");
+});
+
+
 /** building api **/
-app.get("/api/buildings", (req, res)=>{
-  res.status(200).send(dataset.prototype.getBuildings());
+app.get("/api/buildings", async (req, res)=>{
+  res.status(200).send(await dataset.prototype.getBuildings());
 });
 
 /** register stuff */
 app.post('/api/register', async (req, res) => {
   const usersList = await dataset.prototype.getAllUsers();
+  console.log(usersList);
   let user = usersList.find(user => user.username == req.body.username);
-
   if (user != null)
     return res.status(400).send('Username already exists');
-
   const pass = req.body.password;
   const license = req.body.license;
   const hashedPassword = await bcrypt.hash(pass, 10);
-  const hashedLicenseKey = await bcrypt.hash(license, 10);
   user = {
     id: uuidv1(),
     username: req.body.username,
     password: hashedPassword,
   };
-
-  let validKey = await dataset.prototype.getLicense(hashedLicenseKey);
+  let validKey = await dataset.prototype.getLicense(license);
+  console.log(validKey);
   if (validKey)
     await dataset.prototype.addUsers(user);
   else
-    res.status(404).send();
-
-  res.status(201).send();
+    res.status(401).send();
+  res.status(200).send();
 });
 
 /** login stuff */
 app.post('/api/login', async (req, res) => {
   const usersList = await dataset.prototype.getAllUsers();
   const user = usersList.find(user => user.username == req.body.username);
-
   if (user == null)
     return res.status(400).send('User not found');
-
   if (await bcrypt.compare(req.body.password, user.password))
     res.status(200).send('Authentication succeeded')
   else
