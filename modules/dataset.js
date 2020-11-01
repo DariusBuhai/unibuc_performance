@@ -153,26 +153,34 @@ class Dataset {
         return retVal;
     }
 
-    async getEventByHour() {
+    async getEventByHour(idBuilding) {
         let retVal = Array(24).fill(0);
 
-        let db = MongoClient.connect(url);
-        let dbo = db.db("smarthack");
+        let db = await MongoClient.connect(url);
+        let dbo = await db.db("smarthack");
         let collection = await dbo.collection('Events');
-        let items = await collection.find().toArray();
+        let items = await collection.find({idBuilding: idBuilding}).toArray();
 
-        for (let x of itmes) {
+        for (let x of items)
             retVal[x.time] += x.peopleAmount;
-        }
 
         return retVal;
     }
 
     async getEventsList() {
         let db = await MongoClient.connect(url);
-        let dbo = db.db("smarthack");
+        let dbo = await db.db("smarthack");
         let collection = await dbo.collection('Events');
+<<<<<<< HEAD
         return await collection.find().toArray();
+=======
+        let items = await collection.find().toArray();
+        retVal = items.filter((h) => {
+                return h.time() == eventValue;
+        });
+              
+        return retVal;
+>>>>>>> main
     }
 
     async updateEvents(newEvent) {
