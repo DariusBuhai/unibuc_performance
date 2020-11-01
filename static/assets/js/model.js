@@ -20,6 +20,7 @@ async function get_model_details(){
     options.document = "models/"+building_details.svfLink;
     document.getElementById("building_name").innerText = building_details.name;
     document.getElementById("building_address").innerText = building_details.address;
+    document.getElementById("safety-coefficient").innerText = building_details.safety+"%";
 }
 
 async function predict_next_occupancies(){
@@ -95,14 +96,19 @@ function addSphere(ball, insertBall = false) {
 }
 
 async function loadBalls() {
-  console.log('view loaded');
-  let balls = await http_get_async(`/api/balls/${buildingId}`, true);
-  console.log('in load')
-  for (ball of balls) {
-    addSphere(ball);
-  }
-
-  setInterval(updateBalls, 1000);
+    let maxCapacity = 0, peopleInThisMoment = 0;
+    console.log('view loaded');
+    let balls = await http_get_async(`/api/balls/${buildingId}`, true);
+    document.getElementById("active-hotspots").innerText = balls.length;
+    console.log('in load');
+    for (ball of balls) {
+        addSphere(ball);
+        maxCapacity += parseInt(ball.maxCapacity);
+        peopleInThisMoment += parseInt(ball.capacity);
+    }
+    document.getElementById("max-capacity").innerText = maxCapacity;
+    document.getElementById("people-in-this-moment").innerText = peopleInThisMoment;
+    setInterval(updateBalls, 1000);
 }
 
 function getColorFromPercentage(perc) {
