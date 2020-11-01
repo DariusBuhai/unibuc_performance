@@ -74,7 +74,7 @@ function http_post(theUrl, data, callback, isFormData = false) {
     }
 }
 
-async function http_post_async(theUrl, data, callback, isFormData = false){
+async function http_post_async(theUrl, data, isFormData = false){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("POST", theUrl, false);
     if(isFormData){
