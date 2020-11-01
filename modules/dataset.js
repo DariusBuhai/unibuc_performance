@@ -153,6 +153,21 @@ class Dataset {
         return retVal;
     }
 
+    async getEventByHour() {
+        let retVal = Array(24).fill(0);
+
+        let db = MongoClient.connect(url);
+        let dbo = db.db("smarthack");
+        let collection = await dbo.collection('Events');
+        let items = await collection.find().toArray();
+
+        for (let x of itmes) {
+            retVal[x.time] += x.peopleAmount;
+        }
+
+        return retVal;
+    }
+
     async getEventsList(eventValue) {
         let retVal = [];
 

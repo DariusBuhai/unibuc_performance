@@ -78,3 +78,8 @@ app.post('/api/login', async (req, res) => {
   else
     res.status(401).send('Wrong password');
 });
+
+/** chart */
+app.get('/ati/chart', async(req, res) => {
+  return await dataset.prototype.getEventByHour();
+});
